@@ -5,11 +5,11 @@
 	class EnseignantModel
 	{
 		protected $table = 'enseignants';
+		protected $primaryKey = 'id';
 
 		protected $allowedFields = [
 		'nom',
 		'prenom',
-		'id',
 		'email'
 		];
 	}
