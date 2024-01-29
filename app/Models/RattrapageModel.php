@@ -7,6 +7,7 @@
 
 		protected $allowedFields = [
 		'classe',
+		'semestre',
 		'matiere',
 		'date',
 		'heure',
