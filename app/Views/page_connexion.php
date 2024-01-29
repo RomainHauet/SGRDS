@@ -13,11 +13,15 @@
     <?php echo form_open('connexion'); ?>
 
     <div id="cent">
-        <label for="username">Identifiant:</label>
-        <input type="text" name="username" required>
+        <div>
+            <label for="username">Identifiant:</label>
+            <input type="text" name="username" required>
+        </div>
 
-        <label for="password">Mot de passe:</label>
-        <input type="password" name="password" required>
+        <div>
+            <label for="password">Mot de passe:</label>
+            <input type="password" name="password" required>
+        </div>
 
         <button type="submit">Connexion</button>
     </div>
