@@ -199,3 +199,46 @@ Stack trace:
 #8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
 #9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
 #10 {main}
+ERROR - 2024-01-29 14:06:58 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /di/codeigniter/dl201710/SGRDS/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /di/codeigniter/dl201710/SGRDS/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /di/codeigniter/dl201710/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /di/codeigniter/dl201710/SGRDS/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /di/codeigniter/dl201710/SGRDS/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#6 /di/codeigniter/dl201710/SGRDS/app/Controllers/ListeRattrapageController.php(13): CodeIgniter\BaseModel->findAll()
+#7 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+#8 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /di/codeigniter/dl201710/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /di/codeigniter/dl201710/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /di/codeigniter/dl201710/SGRDS/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /di/codeigniter/dl201710/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /di/codeigniter/dl201710/SGRDS/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /di/codeigniter/dl201710/SGRDS/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#5 /di/codeigniter/dl201710/SGRDS/app/Controllers/ListeRattrapageController.php(13): CodeIgniter\BaseModel->findAll()
+#6 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+#7 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#8 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /di/codeigniter/dl201710/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /di/codeigniter/dl201710/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-01-29 14:06:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/ListeRattrapageController.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/dl201710/SGRDS/public/index.php')

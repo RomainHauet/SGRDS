@@ -4,16 +4,16 @@
 	class RattrapageModel extends Model
 	{
 		protected $table = 'rattrapages';
-
+		protected $primaryKey = 'id';
 		protected $allowedFields = [
-		'classe',
 		'semestre',
 		'type',
-		'matiere',
+		'ressource',
 		'date',
+		'etat',
 		'heure',
 		'duree',
-		'prof',
+		'enseignant',
 		'absent',
 		'justifie',
 		];

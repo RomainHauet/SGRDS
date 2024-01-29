@@ -5,5 +5,6 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'ConnexionController::index');
-$routes->get('/connexion', 'ConnexionController::loginAuth');
+$routes->get('/connexion', 'ConnexionController::index');
+$routes->get('/connexionForm', 'ConnexionController::loginAuth');
+$routes->get('/', 'ListeRattrapageController::index');

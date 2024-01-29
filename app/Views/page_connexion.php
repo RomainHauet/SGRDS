@@ -9,7 +9,7 @@
 
     <h2>Connexion</h2>
 
-    <?php echo form_open('connexion'); ?>
+    <?php echo form_open('connexionForm'); ?>
 
     <label for="username">Identifiant:</label>
     <input type="text" name="username" required>
