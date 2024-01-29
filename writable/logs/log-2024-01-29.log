@@ -1,0 +1,173 @@
+ERROR - 2024-01-29 07:58:11 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-01-29 07:58:11 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php')
+ERROR - 2024-01-29 07:59:13 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-01-29 07:59:13 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php')
+ERROR - 2024-01-29 07:59:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-01-29 07:59:25 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php')
+INFO - 2024-01-29 08:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-29 08:00:21 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#6 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#7 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#8 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#9 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-01-29 08:00:21 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php')
