@@ -8,9 +8,7 @@
 		protected $allowedFields = [
 		'nom',
 		'prenom',
-		'classe',
-		'cne',
-		'cin',
+		'id',
 		'email',
 		];
 	}
