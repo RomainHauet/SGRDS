@@ -171,3 +171,31 @@ in SYSTEMPATH/Database/BaseConnection.php on line 427.
  8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
  9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/etudiant/th210310/TP/s6/r6.05_dev_avance/SGRDS-main/SGRDS/public/index.php')
+ERROR - 2024-01-29 08:10:23 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /di/codeigniter/hr202541/SGRDS/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /di/codeigniter/hr202541/SGRDS/system/Database/MySQLi/Connection.php(184): mysqli->real_connect()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#10 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /di/codeigniter/hr202541/SGRDS/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
