@@ -1,13 +1,12 @@
 <?php
-	namespace App\Controllers;
-	use CodeIgniter\Model;
+namespace App\Controllers;
 
-	class AttendanceModel
-	{
-		protected $table = 'attendances';
+class AttendanceModel
+{
+    protected $table = 'attendances';
 
-		protected $allowedFields = [
-		'eleve',
-		'rattrapage',
-		];
-	}
+    protected $allowedFields = [
+        'eleve',
+        'rattrapage',
+    ];
+}

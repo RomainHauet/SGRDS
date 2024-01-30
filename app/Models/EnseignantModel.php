@@ -1,15 +1,14 @@
 <?php
-	namespace App\Controllers;
-	use CodeIgniter\Model;
+namespace App\Controllers;
 
-	class EnseignantModel
-	{
-		protected $table = 'enseignants';
-		protected $primaryKey = 'id';
+class EnseignantModel
+{
+    protected $table = 'enseignants';
+    protected $primaryKey = 'id';
 
-		protected $allowedFields = [
-		'nom',
-		'prenom',
-		'email'
-		];
-	}
+    protected $allowedFields = [
+        'nom',
+        'prenom',
+        'email',
+    ];
+}
