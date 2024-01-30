@@ -706,3 +706,381 @@ Stack trace:
 #9 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
 #10 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
 #11 {main}
+ERROR - 2024-01-30 13:29:19 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapage » n'existe pas
+LINE 2: FROM &quot;rattrapage&quot;
+             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#6 /di/codeigniter/hr202541/SGRDS/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#7 /di/codeigniter/hr202541/SGRDS/app/Controllers/ListeRattrapageController.php(13): CodeIgniter\BaseModel->findAll()
+#8 /di/codeigniter/hr202541/SGRDS/system/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+#9 /di/codeigniter/hr202541/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#10 /di/codeigniter/hr202541/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#11 /di/codeigniter/hr202541/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2024-01-30 13:29:19 --> pg_query(): Query failed: ERREUR:  la relation « rattrapage » n'existe pas
+LINE 2: FROM &quot;rattrapage&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/ListeRattrapageController.php(13): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/hr202541/SGRDS/public/index.php')
+ERROR - 2024-01-30 13:29:20 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapage » n'existe pas
+LINE 2: FROM &quot;rattrapage&quot;
+             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#6 /di/codeigniter/hr202541/SGRDS/system/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+#7 /di/codeigniter/hr202541/SGRDS/app/Controllers/ListeRattrapageController.php(13): CodeIgniter\BaseModel->findAll()
+#8 /di/codeigniter/hr202541/SGRDS/system/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+#9 /di/codeigniter/hr202541/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#10 /di/codeigniter/hr202541/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#11 /di/codeigniter/hr202541/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2024-01-30 13:29:20 --> pg_query(): Query failed: ERREUR:  la relation « rattrapage » n'existe pas
+LINE 2: FROM &quot;rattrapage&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/ListeRattrapageController.php(13): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/hr202541/SGRDS/public/index.php')
+ERROR - 2024-01-30 13:40:46 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapage » existe déjà in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-30-133959_Rattrapage.php(64): CodeIgniter\Database\Forge->createTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapage->up()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-30 13:40:48 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapage » existe déjà in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-30-133959_Rattrapage.php(64): CodeIgniter\Database\Forge->createTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapage->up()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-30 13:40:52 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapage » existe déjà in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-30-133959_Rattrapage.php(64): CodeIgniter\Database\Forge->createTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapage->up()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-30 13:41:14 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapage » existe déjà in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-30-133959_Rattrapage.php(64): CodeIgniter\Database\Forge->createTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapage->up()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-30 13:41:19 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapage » existe déjà in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(546): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-30-133959_Rattrapage.php(64): CodeIgniter\Database\Forge->createTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapage->up()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-30 13:42:18 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapages" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                   ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(54): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:42:38 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(54): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:42:40 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(54): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:43:02 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(54): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:43:41 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(54): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 13:43:42 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(54): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 13:44:07 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(57): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:44:10 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(57): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:46:14 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(58): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:46:21 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(58): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+ERROR - 2024-01-30 13:47:20 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0) VALUES (:0:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(32): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
+CRITICAL - 2024-01-30 13:47:31 --> Undefined array key "date"
+in APPPATH/Views/liste_rattrapage.php on line 52.
+ 1 APPPATH/Views/liste_rattrapage.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/di/codeigniter/hr202541/SGRDS/app/Views/liste_rattrapage.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/ListeRattrapageController.php(15): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ListeRattrapageController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/hr202541/SGRDS/public/index.php')
+ERROR - 2024-01-30 13:50:12 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « 0 »
+LINE 1: INSERT INTO "rattrapage" (0, 1, 2) VALUES (:0:, :1:, :2:)
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(58): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#12 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#13 {main}
