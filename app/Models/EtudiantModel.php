@@ -3,7 +3,7 @@
 	use CodeIgniter\Model;
 	class EtudiantModel extends Model
 	{
-		protected $table = 'rattrapage';
+		protected $table = 'etudiant';
 		protected $primaryKey = 'id';
 
 		protected $allowedFields = [

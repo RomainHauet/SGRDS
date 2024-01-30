@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class ParticipeModel extends Model
 {
-    protected $table = 'rattrapage';
+    protected $table = 'participe';
     protected $primaryKey = 'id_R, id_Edt';
     
     protected $allowedFields = [
