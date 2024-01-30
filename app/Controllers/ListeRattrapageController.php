@@ -10,9 +10,8 @@ class ListeRattrapageController extends BaseController
         $modele_rattrapage = new RattrapageModel();
 
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
-        //$rattrapages = $modele_rattrapage->findAll();
-        //var_dump($rattrapages);
+        $rattrapages = $modele_rattrapage->findAll();
 
-        return view('liste_rattrapage');
+        return view('liste_rattrapage', ['rattrapages' => $rattrapages]);
     }
 }
