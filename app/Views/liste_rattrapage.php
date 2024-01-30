@@ -7,9 +7,9 @@
         <script src="<?=base_url('assets/js/ListeEtudiant.js');?>" type="text/javascript"></script>
     </head>
     <body>
+        <button><a href="/connexion">Connexion</a></button>
         <?php if (!empty($rattrapages) && is_array($rattrapages)): ?>
         <h1>Liste des rattrapages</h1>
-        <button><a href="/connexion">Connexion</a></button>
         <div class="pager">
         <table border="1" class="sortable">
             <thead>
@@ -60,5 +60,10 @@
         <?php else: ?>
             <p>Aucun rattrapage.</p>
         <?php endif; ?>
+
+        <?php if(!empty($session) && $session->get('isLoggedIn') == true): ?>
+            <button><a href="/ajout_rattrapage">Ajouter un rattrapage</a></button>
+        <?php endif; ?>
+
     </body>
 </html>
