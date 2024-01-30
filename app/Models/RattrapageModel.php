@@ -18,7 +18,7 @@
 			'listeeleve',
 		];
 
-		protected $validationRules = [
+		/*protected $validationRules = [
 			'semestre' => 'required',
 			'type' => 'required',
 			'ressource' => 'required',
@@ -28,5 +28,5 @@
 			'duree' => 'required',
 			'enseignant' => 'required',
 			'listeeleve' => 'required',
-		];
+		];*/
 	}

@@ -67,3 +67,642 @@ in SYSTEMPATH/Commands/Generators/Views/migration.tpl.php on line 16.
 12 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Generators\SessionMigrationGenerator->run()
 13 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
 14 ROOTPATH/spark(102): CodeIgniter\CLI\Console->run()
+ERROR - 2024-01-30 10:23:38 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « absent » de la relation « rattrapages » n'existe pas
+LINE 1: INSERT INTO "rattrapages"("absent", "date", "duree", "enseig...
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1800): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2191): CodeIgniter\Database\BaseBuilder->batchExecute()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(75): CodeIgniter\Database\BaseBuilder->insertBatch()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#8 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2024-01-30 10:24:24 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « ) »
+LINE 1: INSERT INTO "rattrapages"()
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1800): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2191): CodeIgniter\Database\BaseBuilder->batchExecute()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseBuilder->insertBatch()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#8 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2024-01-30 10:24:27 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « ) »
+LINE 1: INSERT INTO "rattrapages"()
+                                  ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1800): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2191): CodeIgniter\Database\BaseBuilder->batchExecute()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseBuilder->insertBatch()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#8 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2024-01-30 10:25:00 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:25:03 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:25:22 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:25:24 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:25:45 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:25:47 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(69): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:26:05 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(26): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:26:08 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(26): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:26:44 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(26): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2024-01-30 10:27:38 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(26): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:27:40 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...tat, heure, duree, enseignant, listeEleve) VALUES(:semestre:...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(26): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:33:56 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « users » n'existe pas
+LINE 1: INSERT INTO users (username, email) VALUES('darth', 'darth@t...
+                    ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(17): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:34:29 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « type » dans la relation « rattrapages »
+DETAIL:  La ligne en échec contient (1, S1, null, null, null, null, null, null, null, null). in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:34:31 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « type » dans la relation « rattrapages »
+DETAIL:  La ligne en échec contient (2, S1, null, null, null, null, null, null, null, null). in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:36:03 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « type » dans la relation « rattrapages »
+DETAIL:  La ligne en échec contient (3, S1, null, null, null, null, null, null, null, null). in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:36:05 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « type » dans la relation « rattrapages »
+DETAIL:  La ligne en échec contient (4, S1, null, null, null, null, null, null, null, null). in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:36:24 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « type » dans la relation « rattrapages »
+DETAIL:  La ligne en échec contient (1, S1, null, null, null, null, null, null, null, null). in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:36:27 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « type » dans la relation « rattrapages »
+DETAIL:  La ligne en échec contient (2, S1, null, null, null, null, null, null, null, null). in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(16): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:03 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « listeeleve » de la relation « rattrapages » n'existe pas
+LINE 1: ... ressource, date, etat, heure, duree, enseignant, listeeleve...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:06 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « listeeleve » de la relation « rattrapages » n'existe pas
+LINE 1: ... ressource, date, etat, heure, duree, enseignant, listeeleve...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:16 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...021-01-30', 'En cours', '10h', '2h', 'M. Dupont', :listeelev...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:27 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...021-01-30', 'En cours', '10h', '2h', 'M. Dupont', :listEelev...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:29 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...021-01-30', 'En cours', '10h', '2h', 'M. Dupont', :listEelev...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:38 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « listeeleve » de la relation « rattrapages » n'existe pas
+LINE 1: ... ressource, date, etat, heure, duree, enseignant, listeEleve...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:40 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « listeeleve » de la relation « rattrapages » n'existe pas
+LINE 1: ... ressource, date, etat, heure, duree, enseignant, listeEleve...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:37:55 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « \ »
+LINE 1: ... ressource, date, etat, heure, duree, enseignant, \"listeEle...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:38:54 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...021-01-30', 'En cours', '10h', '2h', 'M. Dupont', :listeelev...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:38:58 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...021-01-30', 'En cours', '10h', '2h', 'M. Dupont', :listeelev...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:39:13 --> ErrorException: pg_query(): Query failed: ERREUR:  INSERT a plus de colonnes cibles que d'expressions
+LINE 1: ... ressource, date, etat, heure, duree, enseignant, listeeleve...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:39:21 --> ErrorException: pg_query(): Query failed: ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « listeeleve » dans la relation « rattrapages »
+DETAIL:  La ligne en échec contient (1, S1, DS, Maths, 2021-01-30, En cours, 10h, 2h, M. Dupont, null). in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:39:29 --> ErrorException: pg_query(): Query failed: ERREUR:  identifiant délimité de longueur nulle sur ou près de « "" »
+LINE 1: ...hs', '2021-01-30', 'En cours', '10h', '2h', 'M. Dupont', "")
+                                                                    ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:39:31 --> ErrorException: pg_query(): Query failed: ERREUR:  identifiant délimité de longueur nulle sur ou près de « "" »
+LINE 1: ...hs', '2021-01-30', 'En cours', '10h', '2h', 'M. Dupont', "")
+                                                                    ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:39:47 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « test » n'existe pas
+LINE 1: ... '2021-01-30', 'En cours', '10h', '2h', 'M. Dupont', "test")
+                                                                ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:39:50 --> ErrorException: pg_query(): Query failed: ERREUR:  la colonne « test » n'existe pas
+LINE 1: ... '2021-01-30', 'En cours', '10h', '2h', 'M. Dupont', "test")
+                                                                ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:39:59 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « \ »
+LINE 1: ...2021-01-30', 'En cours', '10h', '2h', 'M. Dupont', \"test\")
+                                                              ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:40:22 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...021-01-30', 'En cours', '10h', '2h', 'M. Dupont', :listeelev...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:40:23 --> ErrorException: pg_query(): Query failed: ERREUR:  erreur de syntaxe sur ou près de « : »
+LINE 1: ...021-01-30', 'En cours', '10h', '2h', 'M. Dupont', :listeelev...
+                                                             ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(24): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#6 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#7 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#9 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-30 10:40:39 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « users » n'existe pas
+LINE 1: INSERT INTO "users" ("semestre", "type", "ressource", "date"...
+                    ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(27): CodeIgniter\Database\BaseBuilder->insert()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#7 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#8 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#10 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
