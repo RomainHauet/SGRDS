@@ -14,20 +14,19 @@ class ConnexionController extends BaseController
     {
         $session = session();
         $directeurModel = new DirecteurModel();
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
-        $data = $directeurModel->where('username', $username)->first();
+        $username = $this->request->getVar('identifiant');
+        $password = $this->request->getVar('motDePasse');
+        $data = $directeurModel->where('identifiant', $username)->first();
 
         if($data)
         {
-            $pass = $data['password'];
+            $pass = $data['motDePasse'];
             $authenticatePassword = password_verify($password, $pass);
 
             if($authenticatePassword){
                 $ses_data = [
                 'id' => $data['id'],
-                'username' => $data['username'],
-                'email' => $data['email'],
+                'identifiant' => $data['identifiant'],
                 'isLoggedIn' => TRUE
                 ];
 
