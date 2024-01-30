@@ -49,7 +49,7 @@
             <?php foreach ($rattrapages as $rattrapage): ?>
                 <tr>
                     <td><?=$rattrapage['ressource'];?></td>
-                    <td><?=$rattrapage['date'];?></td>
+                    <td><?=$rattrapage['date_DS'];?></td>
                     <td><?=$rattrapage['duree'];?></td>
                     <td><?=$rattrapage['enseignant'];?></td>
                     <td><?=$rattrapage['etat'];?></td>

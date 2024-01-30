@@ -1,14 +1,28 @@
 <?php
+
+namespace App\Models;
+
 use CodeIgniter\Model;
 
-	class EnseignantModel
-	{
-		protected $table = 'enseignant';
-		protected $primaryKey = 'id_Ens';
+class EnseignantModel extends Model
+{
+    protected $table = 'rattrapage';
+    protected $primaryKey = 'id_R, id_Edt';
+    
+    protected $allowedFields = [
+        'id_R',
+        'id_Edt',
+        'justifie',
+    ];
 
-		protected $allowedFields = [
-		'nom',
-		'prenom',
-		'email'
-		];
-	}
+    protected $foreignKey = [
+        'id_Edt',
+        'id_R',
+    ];
+
+    protected $validationRules = [
+        'id_R' => 'required',
+        'id_Edt' => 'required',
+        'justifie' => 'required',
+    ];
+}
