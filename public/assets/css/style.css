@@ -1,0 +1,80 @@
+body
+{
+    background-color: #ADBFCF;
+}
+
+.sortable, .sortable.th, .sortable.td
+{
+    text-align: center;
+    border: solid black 1px;
+}
+
+.univ
+{
+    text-align: bottom;
+}
+
+.di
+{
+    text-align: right;
+}
+
+.pager
+{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #3A4476;
+    margin-right: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #AAAAAA;
+    background-color: #EFEFEF;
+    width: 80%;
+}
+
+.connexion
+{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #3A4476;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #AAAAAA;
+    background-color: #EFEFEF;
+    width: 20%;
+}
+
+.logos
+{
+    width: 100%;
+}
+
+.bandeau
+{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #3A4476;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #AAAAAA;
+    background-color: #EFEFEF;
+    width: 100%;
+}
+
+.titre
+{
+    text-align: center;
+}
+
+.violet
+{
+    color: #371951;
+}
+
+.cadre
+{
+    display:flex;
+    padding: 20px;
+}
