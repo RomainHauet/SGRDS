@@ -3,6 +3,10 @@
 	top: -30em;
 }
 
+tr {
+	padding: 10em;
+}
+
 table.sortable td,
 table.sortable th {
 	padding: 0.125em 0.25em;
