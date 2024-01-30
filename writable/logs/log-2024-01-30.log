@@ -706,3 +706,163 @@ Stack trace:
 #9 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
 #10 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
 #11 {main}
+INFO - 2024-01-30 12:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-30 12:43:53 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^ in /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/dl201710/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/dl201710/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 /di/codeigniter/dl201710/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 /di/codeigniter/dl201710/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#8 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#9 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#10 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#11 /di/codeigniter/dl201710/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /di/codeigniter/dl201710/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2024-01-30 12:43:53 --> pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/dl201710/SGRDS/public/index.php')
+INFO - 2024-01-30 12:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-30 12:44:54 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^ in /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/dl201710/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/dl201710/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 /di/codeigniter/dl201710/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 /di/codeigniter/dl201710/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#8 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#9 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#10 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#11 /di/codeigniter/dl201710/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /di/codeigniter/dl201710/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2024-01-30 12:44:54 --> pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/dl201710/SGRDS/public/index.php')
+INFO - 2024-01-30 12:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-30 12:46:30 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^ in /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/dl201710/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/dl201710/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 /di/codeigniter/dl201710/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 /di/codeigniter/dl201710/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#8 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#9 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#10 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#11 /di/codeigniter/dl201710/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /di/codeigniter/dl201710/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2024-01-30 12:46:30 --> pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/dl201710/SGRDS/public/index.php')
+INFO - 2024-01-30 12:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-30 12:55:39 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^ in /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/dl201710/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/dl201710/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 /di/codeigniter/dl201710/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 /di/codeigniter/dl201710/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#8 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#9 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#10 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#11 /di/codeigniter/dl201710/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /di/codeigniter/dl201710/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2024-01-30 12:55:39 --> pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/dl201710/SGRDS/public/index.php')
+INFO - 2024-01-30 12:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-01-30 12:56:16 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^ in /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/dl201710/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/dl201710/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/dl201710/SGRDS/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/dl201710/SGRDS/system/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 /di/codeigniter/dl201710/SGRDS/system/BaseModel.php(662): CodeIgniter\Model->doFirst()
+#7 /di/codeigniter/dl201710/SGRDS/app/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+#8 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+#9 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+#10 /di/codeigniter/dl201710/SGRDS/system/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+#11 /di/codeigniter/dl201710/SGRDS/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 /di/codeigniter/dl201710/SGRDS/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2024-01-30 12:56:16 --> pg_query(): Query failed: ERREUR:  la relation « admins » n'existe pas
+LINE 2: FROM &quot;admins&quot;
+             ^
+in SYSTEMPATH/Database/BaseConnection.php on line 646.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH/Controllers/ConnexionController.php(19): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\ConnexionController->loginAuth()
+ 6 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/dl201710/SGRDS/public/index.php')

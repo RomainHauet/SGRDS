@@ -5,7 +5,8 @@
         <title>Liste des Élèves</title>
     </head>
     <body>
-        <h1>Liste des Élèves</h1>
+        <h1>Liste des Rattrapages</h1>
+        <button><a href="/connexion">Connexion</a></button>
         <?php if (!empty($rattrapages)) : ?>
         <table border="1">
             <tr>
@@ -28,5 +29,7 @@
         <?php else : ?>
             <p>Aucun rattrapage.</p>
         <?php endif; ?>
+
+        <button><a href="/formRattrapage">Ajouter rattrapage</a></button>
     </body>
 </html>
