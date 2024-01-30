@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class DirecteurModel extends Model
 {
-    protected $table = 'rattrapage';
+    protected $table = 'directeur';
     protected $primaryKey = 'id_D';
     
     protected $allowedFields = [
