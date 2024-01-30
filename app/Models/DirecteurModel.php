@@ -10,11 +10,13 @@ class DirecteurModel extends Model
     protected $primaryKey = 'id_D';
     
     protected $allowedFields = [
+        "identifiant",
         "email",
         "motDePasse",
     ];
 
     protected $validationRules = [
+        "identifiant" => "required",
         "email" => "required",
         "motDePasse" => "required",
     ];
