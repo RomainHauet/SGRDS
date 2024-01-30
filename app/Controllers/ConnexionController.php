@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\AdminModel;
+use App\Models\DirecteurModel;
 
 class ConnexionController extends BaseController
 {
@@ -13,10 +13,10 @@ class ConnexionController extends BaseController
     public function loginAuth()
     {
         $session = session();
-        $adminModel = new AdminModel();
+        $directeurModel = new DirecteurModel();
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
-        $data = $adminModel->where('username', $username)->first();
+        $data = $directeurModel->where('username', $username)->first();
 
         if($data)
         {
