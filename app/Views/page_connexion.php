@@ -10,23 +10,21 @@
 
     <h2>Connexion</h2>
 
-    <?php echo form_open('connexionForm'); ?>
+    <form action="/connexionForm" method="post">
+        <div id="cent">
+            <div>
+                <label for="username">Identifiant:</label>
+                <input type="text" name="username" required>
+            </div>
 
-    <div id="cent">
-        <div>
-            <label for="username">Identifiant:</label>
-            <input type="text" name="username" required>
+            <div>
+                <label for="password">Mot de passe:</label>
+                <input type="password" name="password" required>
+            </div>
+
+            <button type="submit">Connexion</button>
         </div>
-
-        <div>
-            <label for="password">Mot de passe:</label>
-            <input type="password" name="password" required>
-        </div>
-
-        <button type="submit">Connexion</button>
-    </div>
-
-    <?php echo form_close(); ?>
+    </form>
 
 </body>
 </html>

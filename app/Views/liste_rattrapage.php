@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Liste des Élèves</h1>
-        <?php if (!empty($rattrapages)): ?>
+        <button><a href="/connexion">Connexion</a></button>
         <div class="pager">
         <table border="1" class="sortable">
             <thead>
@@ -58,6 +58,6 @@
         </div>
         <?php else: ?>
             <p>Aucun rattrapage.</p>
-        <?php endif;?>
+        <?php endif; ?>
     </body>
 </html>
