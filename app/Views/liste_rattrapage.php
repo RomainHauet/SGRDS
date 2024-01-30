@@ -7,6 +7,7 @@
         <script src="<?=base_url('assets/js/ListeEtudiant.js');?>" type="text/javascript"></script>
     </head>
     <body>
+        <?php if (!empty($rattrapages) && is_array($rattrapages)): ?>
         <h1>Liste des Élèves</h1>
         <button><a href="/connexion">Connexion</a></button>
         <div class="pager">
