@@ -317,3 +317,114 @@ in SYSTEMPATH/Database/BaseConnection.php on line 646.
  7 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
  8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/di/codeigniter/dl201710/SGRDS/public/index.php')
+ERROR - 2024-01-29 14:56:55 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapages » n'existe pas
+LINE 1: INSERT INTO "rattrapages"("absent", "date", "duree", "enseig...
+                    ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1800): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2191): CodeIgniter\Database\BaseBuilder->batchExecute()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(75): CodeIgniter\Database\BaseBuilder->insertBatch()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#8 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2024-01-29 14:57:06 --> ErrorException: pg_query(): Query failed: ERREUR:  la table « rattrapages » n'existe pas in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(637): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-29-141541_Rattrapages.php(71): CodeIgniter\Database\Forge->dropTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapages->down()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-29 14:57:09 --> ErrorException: pg_query(): Query failed: ERREUR:  la table « rattrapages » n'existe pas in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(637): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-29-141541_Rattrapages.php(71): CodeIgniter\Database\Forge->dropTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapages->down()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-29 14:57:39 --> ErrorException: pg_query(): Query failed: ERREUR:  la table « rattrapages » n'existe pas in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/Forge.php(637): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/app/Database/Migrations/2024-01-29-141541_Rattrapages.php(71): CodeIgniter\Database\Forge->dropTable()
+#6 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(877): App\Database\Migrations\Rattrapages->down()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/MigrationRunner.php(299): CodeIgniter\Database\MigrationRunner->migrate()
+#8 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress()
+#9 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/CLI/BaseCommand.php(115): CodeIgniter\CLI\Commands->run()
+#11 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run()
+#13 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#14 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2024-01-29 14:57:53 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapages » n'existe pas
+LINE 1: INSERT INTO "rattrapages"("absent", "date", "duree", "enseig...
+                    ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1800): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2191): CodeIgniter\Database\BaseBuilder->batchExecute()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(75): CodeIgniter\Database\BaseBuilder->insertBatch()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#8 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}
+ERROR - 2024-01-29 14:59:26 --> ErrorException: pg_query(): Query failed: ERREUR:  la relation « rattrapages » n'existe pas
+LINE 1: INSERT INTO "rattrapages"("absent", "date", "duree", "enseig...
+                    ^ in /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /di/codeigniter/hr202541/SGRDS/system/Database/Postgre/Connection.php(187): pg_query()
+#2 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(692): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /di/codeigniter/hr202541/SGRDS/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(1800): CodeIgniter\Database\BaseConnection->query()
+#5 /di/codeigniter/hr202541/SGRDS/system/Database/BaseBuilder.php(2191): CodeIgniter\Database\BaseBuilder->batchExecute()
+#6 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/RattrapagesSeeder.php(75): CodeIgniter\Database\BaseBuilder->insertBatch()
+#7 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\RattrapagesSeeder->run()
+#8 /di/codeigniter/hr202541/SGRDS/app/Database/Seeds/SeederGeneration.php(11): CodeIgniter\Database\Seeder->call()
+#9 /di/codeigniter/hr202541/SGRDS/system/Database/Seeder.php(146): App\Database\Seeds\SeederGeneration->run()
+#10 /di/codeigniter/hr202541/SGRDS/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call()
+#11 /di/codeigniter/hr202541/SGRDS/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run()
+#12 /di/codeigniter/hr202541/SGRDS/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#13 /di/codeigniter/hr202541/SGRDS/spark(102): CodeIgniter\CLI\Console->run()
+#14 {main}

@@ -8,21 +8,6 @@ class Rattrapages extends Migration
 {
     public function up()
     {
-        // protected $table = 'rattrapages';
-		// protected $primaryKey = 'id';
-		// protected $allowedFields = [
-		// 'semestre',
-		// 'type',
-		// 'ressource',
-		// 'date',
-		// 'etat',
-		// 'heure',
-		// 'duree',
-		// 'enseignant',
-		// 'absent',
-		// 'justifie',
-		// ];
-
         // déclare les champs de la table rattrapages
         $this->forge->addField([
             'id_R' => array(
@@ -31,6 +16,7 @@ class Rattrapages extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
+            // semestre obligatoire
             'semestre' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
@@ -63,13 +49,8 @@ class Rattrapages extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),
-            'absent' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'justifie' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
+            'listeeleve' => array(
+                'type' => 'TEXT',
             ),
         ]);
 
