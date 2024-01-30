@@ -85,8 +85,8 @@
                 <button><a href="/connexion">Connexion</a></button>
             </div>
         </div>
-    <?php else: ?>
-        <p>Aucun rattrapage.</p>
-    <?php endif; ?>
+        <?php else: ?>
+            <p>Aucun rattrapage.</p>
+        <?php endif; ?>
     </body>
 </html>

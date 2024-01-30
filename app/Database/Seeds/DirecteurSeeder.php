@@ -11,7 +11,7 @@ class DirecteurSeeder extends Seeder
         $data = [
             'identifiant' => 'identifiant1',
             'email' => 'email1',
-            'motDePasse' => 'motDePasse1',
+            'motDePasse' => 'motdepasse1',
         ];
 
         // Simple Queries
