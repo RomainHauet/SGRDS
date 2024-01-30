@@ -3,30 +3,34 @@
 	use CodeIgniter\Model;
 	class RattrapageModel extends Model
 	{
-		protected $table = 'rattrapages';
-		protected $primaryKey = 'id';
+		protected $table = 'rattrapage';
+		protected $primaryKey = 'id_R';
 
 		protected $allowedFields = [
 			'semestre',
-			'type',
+			'type_DS',
+			'type_Rattrapage',
 			'ressource',
-			'date',
+			'date_DS',
+			'date_Rattrapage',
 			'etat',
 			'heure',
 			'duree',
 			'enseignant',
-			'listeeleve',
+			'listeEleve',
 		];
 
-		/*protected $validationRules = [
+		protected $validationRules = [
 			'semestre' => 'required',
-			'type' => 'required',
+			'type_DS' => 'required',
+			//'type_Rattrapage' => 'required',
 			'ressource' => 'required',
-			'date' => 'required',
+			'date_DS' => 'required',
+			//'date_Rattrapage' => 'required',
 			'etat' => 'required',
-			'heure' => 'required',
-			'duree' => 'required',
+			//'heure' => 'required',
+			//'duree' => 'required',
 			'enseignant' => 'required',
-			'listeeleve' => 'required',
-		];*/
+			'listeEleve' => 'required',
+		];
 	}

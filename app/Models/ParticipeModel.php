@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class EnseignantModel extends Model
+class ParticipeModel extends Model
 {
     protected $table = 'rattrapage';
     protected $primaryKey = 'id_R, id_Edt';
