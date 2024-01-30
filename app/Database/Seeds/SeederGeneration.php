@@ -10,7 +10,7 @@ class SeederGeneration extends Seeder
     {
         $this->call('RattrapageSeeder');
         $this->call('DirecteurSeeder');
-        // $this->call('EtudiantSeeder');
+        $this->call('EtudiantSeeder');
         $this->call('EnseignantSeeder');
         // $this->call('ParticipeSeeder');
 
