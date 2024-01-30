@@ -8,12 +8,11 @@ class SeederGeneration extends Seeder
 {
     public function run()
     {
-        $this->call('RattrapagesSeeder');
-        //$this->call('ElevesSeeder');
-        //$this->call('EnseignantsSeeder');
-        //$this->call('MatieresSeeder');
-        //$this->call('SallesSeeder');
-        //$this->call('SeancesSeeder');
-        //$this->call('UtilisateursSeeder');
+        $this->call('RattrapageSeeder');
+        $this->call('DirecteurSeeder');
+        // $this->call('EtudiantSeeder');
+        // $this->call('EnseignantSeeder');
+        // $this->call('ParticipeSeeder');
+
     }
 }

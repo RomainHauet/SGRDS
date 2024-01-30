@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class RattrapagesSeeder extends Seeder
+class RattrapageSeeder extends Seeder
 {
     public function run()
     {
