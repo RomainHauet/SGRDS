@@ -9,9 +9,11 @@
         <?php if (!empty($rattrapages)) : ?>
         <table border="1">
             <tr>
-                <th>Numéro</th>
-                <th>Nom</th>
-                <th>Prénom</th>
+                <th>Ressource</th>
+                <th>Date</th>
+                <th>Durée</th>
+                <th>Enseignant</th>
+                <th>État</th>
             </tr>
             <?php foreach ($rattrapages as $rattrapage) : ?>
                 <tr>
