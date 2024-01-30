@@ -6,23 +6,19 @@ use CodeIgniter\Model;
 
 class EnseignantModel extends Model
 {
-    protected $table = 'rattrapage';
-    protected $primaryKey = 'id_R, id_Edt';
+    protected $table = 'enseignant';
+    protected $primaryKey = 'id_Ens';
     
     protected $allowedFields = [
-        'id_R',
-        'id_Edt',
-        'justifie',
-    ];
-
-    protected $foreignKey = [
-        'id_Edt',
-        'id_R',
+        'id_Ens',
+        'nom',
+        'prenom',
+        'email',
     ];
 
     protected $validationRules = [
-        'id_R' => 'required',
-        'id_Edt' => 'required',
-        'justifie' => 'required',
+        'nom' => 'required',
+        'prenom' => 'required',
+        'email' => 'required',
     ];
 }
