@@ -31,9 +31,10 @@
 
         <br/><br/>
 
-        <?php if (!empty($rattrapages) && is_array($rattrapages)): ?>
-            <div class="cadre">
-                <div class="pager">
+        
+        <div class="cadre">
+            <div class="pager">
+                <?php if (!empty($rattrapages) && is_array($rattrapages)): ?>
                     <table class="sortable">
                         <thead>
                             <tr>
@@ -77,37 +78,36 @@
                                 <td><?=$rattrapage['enseignant'];?></td>
                                 <td><?=$rattrapage['etat'];?></td>
                                 <td>
-                            <?php if (session()->get('isLoggedIn')): ?>
-                                <button><a href="/modifier/<?=$rattrapage['id_R'];?>">Modifier</a></button>
-                            <?php else: ?>
-                                <button><a href="/valider/<?=$rattrapage['id_R'];?>">Valider</a></button>
-                            <?php endif; ?>
-                                <button><a href="/supprimer/<?=$rattrapage['id_R'];?>">Supprimer</a></button>
-                            </td>
+                                    <?php if (session()->get('isLoggedIn')): ?>
+                                        <button onclick="window.location.href='/modifier/<?=$rattrapage['id_R'];?>';">Modifier</button>
+                                        <button onclick="window.location.href='/supprimer/<?=$rattrapage['id_R'];?>';">Supprimer</button>
+                                    <?php else: ?>
+                                        <button onclick="window.location.href='/valider/<?=$rattrapage['id_R'];?>';">Valider</button>
+                                    <?php endif; ?>
+                                </td>
                             </tr>
                         <?php endforeach;?>
                     </table>
-                </div>
-
-                <?php if (session()->get('isLoggedIn')): ?>
-                    <div class="connexion">
-                        <button><a href="/deconnexion">Déconnexion</a></button>
-                    </div>
                 <?php else: ?>
-                    <div class="connexion">
-                        <button><a href="/connexion">Connexion chef de département</a></button>
-                    </div>
+                    <p>Aucun rattrapage.</p>
                 <?php endif; ?>
-
             </div>
-        <?php else: ?>
-            <p>Aucun rattrapage.</p>
-        <?php endif; ?>
+
+            <?php if (session()->get('isLoggedIn')): ?>
+                <div class="connexion">
+                    <button onclick="window.location.href='/deconnexion';">Déconnexion</button>
+                </div>
+            <?php else: ?>
+                <div class="connexion">
+                    <button onclick="window.location.href='/connexion';">Connexion chef de département</button>
+                </div>
+            <?php endif; ?>
+        </div>
 
         <?php if (session()->get('isLoggedIn')): ?>
             <div class="cadre">
                 <div class="pager">
-                    <button class="connexion" style="height: 50px;"><a href="/ajout">Ajouter un rattrapage</a></button>
+                    <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout';">Ajouter un rattrapage</button>
                 </div>
                 <div style="width:20%;padding:10px"></div>
             </div>

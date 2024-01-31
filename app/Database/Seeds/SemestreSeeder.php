@@ -26,6 +26,7 @@ class SemestreSeeder extends Seeder
                     'R1.12',
                 ],
             ],
+
             [
                 'semestre' => 'S2',
                 'resource' => [

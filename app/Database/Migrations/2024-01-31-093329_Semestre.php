@@ -20,8 +20,7 @@ class Semestre extends Migration
                 'constraint' => '255',
             ],
             'resource' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
+                'type' => 'TEXT',
             ],
         ]);
         $this->forge->addKey('id_S', true);
