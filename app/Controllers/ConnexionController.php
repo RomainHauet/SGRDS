@@ -21,28 +21,22 @@ class ConnexionController extends BaseController
         if($data)
         {
             $pass = $data['motDePasse'];
-            $authenticatePassword = password_verify($password, $pass);
-
+            $authenticatePassword = $password == $pass ? true : false;
             if($authenticatePassword){
-                $ses_data = [
-                'id' => $data['id'],
-                'identifiant' => $data['identifiant'],
-                'isLoggedIn' => TRUE
-                ];
 
-                $session->set($ses_data);
+                $session->set('isLoggedIn', true);
                 return redirect()->to('/');
             }
             else
             {
-                $session->setFlashdata('msg', 'Mot de passe incorrect.');
-                return redirect()->to('/');
+                $session->setFlashdata('mdpError', 'Mot de passe incorrect.');
+                return redirect()->to('/connexion');
             }
         }
         else
         {
-            $session->setFlashdata('msg', 'Utilisateur n\'existe pas.');
-            return redirect()->to('/');
+            $session->setFlashdata('utilisateurError', 'Utilisateur n\'existe pas.');
+            return redirect()->to('/connexion');
         }
     }
 }
