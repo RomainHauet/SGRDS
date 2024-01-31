@@ -9,9 +9,9 @@ class DirecteurSeeder extends Seeder
     public function run()
     {
         $data = [
-            'identifiant' => 'identifiant1',
-            'email' => 'email1',
-            'motDePasse' => 'motdepasse1',
+            'identifiant' => 'i',
+            'email' => 'tassery.hugo@gmail.com',
+            'motDePasse' => 'm',
         ];
 
         // Simple Queries

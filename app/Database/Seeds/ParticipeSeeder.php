@@ -13,8 +13,6 @@ class ParticipeSeeder extends Seeder
         $rattrapages = $this->db->table('rattrapage')->select('id_R')->get()->getResultArray();
 
         // affiche les données
-        var_dump($etudiants);
-        var_dump($rattrapages);
         $data = [];
         foreach ($etudiants as $etudiant) {
             $data[] = [
