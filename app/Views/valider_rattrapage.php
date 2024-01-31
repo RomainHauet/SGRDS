@@ -11,7 +11,7 @@
             <h1>modifier un rattrapage</h1>
         <?php endif; ?>
         
-        <form action="<?php echo isset($rattrapage) ? '/modifier/'.$rattrapage['id_R'] : '/ajout'; ?>" method="post">
+        <form action="<?php echo isset($rattrapage) ? '/valider/'.$rattrapage['id_R'] : '/ajout'; ?>" method="post">
             <br>
             <label for="date_Rattrapage">Date</label>
             <input type="date" name="date_Rattrapage" id="date_Rattrapage" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['date_Rattrapage'].'"'; ?> required>

@@ -24,10 +24,11 @@ class Participe extends Migration
 
         $this->forge->addKey(['id_Edt', 'id_R']);
 
-        $this->forge->addForeignKey('id_Edt', 'etudiant', 'id_Edt');
-        $this->forge->addForeignKey('id_R', 'rattrapage', 'id_R');
+        //cascade pour supprimer les données liées
+        $this->forge->addForeignKey('id_Edt', 'etudiant', 'id_Edt', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('id_R', 'rattrapage', 'id_R', 'CASCADE', 'CASCADE');
 
-        $this->forge->createTable('participe');
+        $this->forge->createTable('participe', true);
     }
 
     public function down()

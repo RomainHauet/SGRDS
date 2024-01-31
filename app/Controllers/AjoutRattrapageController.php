@@ -61,7 +61,7 @@ class AjoutRattrapageController extends BaseController
         }
         else
         {
-            echo view('ajout_rattrapage', $data);
+            echo view('/');
         }
     }
 }

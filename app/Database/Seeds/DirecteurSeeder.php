@@ -8,6 +8,9 @@ class DirecteurSeeder extends Seeder
 {
     public function run()
     {
+        // suprimme le contenu de la table directeur
+        $this->db->table('directeur')->truncate();
+        
         $data = [
             'identifiant' => 'i',
             'email' => 'tassery.hugo@gmail.com',

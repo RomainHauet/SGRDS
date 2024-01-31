@@ -79,10 +79,10 @@
                                 <td>
                                     <?php if (session()->get('isLoggedIn')): ?>
                                         <button onclick="window.location.href='/modifier/<?=$rattrapage['id_R'];?>';">Modifier</button>
-                                    <?php else: ?>
-                                        <button onclick="window.location.href='/valider/<?=$rattrapage['id_R'];?>',">Valider</button>
-                                    <?php endif; ?>
                                         <button onclick="window.location.href='/supprimer/<?=$rattrapage['id_R'];?>';">Supprimer</button>
+                                    <?php else: ?>
+                                        <button onclick="window.location.href='/valider/<?=$rattrapage['id_R'];?>';">Valider</button>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach;?>

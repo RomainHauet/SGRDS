@@ -7,7 +7,7 @@
 <!-- formulaire de réinitialisation de mot de passe -->
 <body>
 	<h1>Réinitialisation de mot de passe</h1>
-	<form action="/reset-password/done" method="post">
+	<form action="" method="post">
 		<label for="password">Nouveau mot de passe</label>
 		<input type="password" name="password" id="password">
 		<label for="confirm_password">Confirmer le mot de passe</label>
