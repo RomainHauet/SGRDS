@@ -39,4 +39,11 @@ class ConnexionController extends BaseController
             return redirect()->to('/connexion');
         }
     }
+
+    public function deconnexion()
+    {
+        $session = session();
+        $session->destroy();
+        return redirect()->to('/');
+    }
 }

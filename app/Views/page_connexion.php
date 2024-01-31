@@ -10,7 +10,7 @@
 
     <h2>Connexion</h2>
 
-    <form action="/connexionForm" method="post">
+    <form action="/connexion" method="post">
         <div id="cent">
             <div>
                 <label for="username">Identifiant:</label>
