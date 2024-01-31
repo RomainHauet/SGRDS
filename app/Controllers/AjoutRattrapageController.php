@@ -35,25 +35,21 @@ class AjoutRattrapageController extends BaseController
     public function ajoutRattrapage()
     {
         helper(['form']);
-        $rules = [
-            'ressource' => 'required',
-            'date' => 'required',
-            'duree' => 'required',
-            'enseignant' => 'required',
+
+        $model = new RattrapageModel();
+        $data = [
+            'semestre' => $this->request->getVar('semestre'),
+            'ressource' => $this->request->getVar('ressource'),
+            'type_DS' => $this->request->getVar('type_DS'),
+            'date_DS' => $this->request->getVar('date_DS'),
+            'duree' => $this->request->getVar('duree'),
+            'enseignant' => $this->request->getVar('enseignant'),
+            'etat' => 'En attente',
+            'listeEleve' => 'Personne',
         ];
 
-        if($this->validate($rules))
-        {
-            $model = new RattrapageModel();
-            $data = [
-                'ressource' => $this->request->getVar('ressource'),
-                'date' => $this->request->getVar('date'),
-                'duree' => $this->request->getVar('duree'),
-                'enseignant' => $this->request->getVar('enseignant'),
-            ];
-
-            // Le rattrapage est ajouté dans la base de données
-            $model->save($data);
+        // Le rattrapage est ajouté dans la base de données
+        $model->save($data);
 
             $session = session();
             $session->setFlashdata('success', 'Rattrapage ajouté avec succès');
@@ -83,10 +79,6 @@ class AjoutRattrapageController extends BaseController
             }
 
             return redirect()->to('/');
-        }
-        else
-        {
-            echo view('/');
-        }
+        
     }
 }

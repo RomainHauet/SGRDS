@@ -8,6 +8,9 @@ class SemestreSeeder extends Seeder
 {
     public function run()
     {
+        // suprimme le contenu de la table semestre
+        $this->db->table('semestre')->truncate();
+        
         $data = [
             [
                 'semestre' => 'S1',
