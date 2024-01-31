@@ -2,8 +2,6 @@
 namespace App\Controllers;
 
 use App\Models\DirecteurModel;
-use App\Models\UserModelB;
-use CodeIgniter\Controller;
 
 class ResetPasswordController extends BaseController
 {
@@ -21,16 +19,16 @@ class ResetPasswordController extends BaseController
         }
     }
 
-	public function indexB()
-	{
-		helper(['form']);
-		return view('reset_password_success');
-	}
+    public function indexB()
+    {
+        helper(['form']);
+        return view('reset_password_success');
+    }
 
     public function updatePassword()
     {
         $token = $this->request->getPost('token');
-        $password = "". $this->request->getPost('password');
+        $password = "" . $this->request->getPost('password');
         $confirmPassword = $this->request->getPost('confirm_password');
 
 // Valider et traiter les données du formulaire
@@ -47,7 +45,8 @@ class ResetPasswordController extends BaseController
             $userModel->set('password', $password)
                 ->set('reset_token', 'r')
                 ->set('reset_expires_at', '2021-01-01 00:00:00')
-                ->update($user['id_D']);return 'Mot de passe réinitialisé avec succès.';
+                ->update($user['id_D']);
+            return 'Mot de passe réinitialisé avec succès.';
         } else {
             return 'Erreur lors de la réinitialisation du mot de passe.';
         }
