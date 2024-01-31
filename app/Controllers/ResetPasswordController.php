@@ -49,7 +49,6 @@ class ResetPasswordController extends BaseController
 			$user['reset_expires_at'] = '2021-01-01 00:00:00';
 			$userModel->update($user['id_D'], $user);
 
-            dd($user['id_D'], $user, $password, $confirmPassword);
             if ($user['motDePasse'] === $password) {
                 return 'Mot de passe réinitialisé avec succès.';
             } else {
