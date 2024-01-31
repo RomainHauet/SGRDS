@@ -10,7 +10,7 @@ class DirecteurSeeder extends Seeder
     {
         $data = [
             'identifiant' => 'i',
-            'email' => 'email1',
+            'email' => 'tassery.hugo@gmail.com',
             'motDePasse' => 'm',
         ];
 
