@@ -13,6 +13,8 @@ class DirecteurModel extends Model
         "identifiant",
         "email",
         "motDePasse",
+        "reset_token",
+        "reset_expires_at",
     ];
 
     protected $validationRules = [
