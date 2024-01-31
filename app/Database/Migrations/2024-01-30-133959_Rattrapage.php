@@ -42,6 +42,10 @@ class Rattrapage extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'salle' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
+            ],
             'heure' => [
                 'type' => 'NUMERIC',
             ],

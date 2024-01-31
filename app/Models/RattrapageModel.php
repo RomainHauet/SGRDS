@@ -14,6 +14,7 @@
 			'date_DS',
 			'date_Rattrapage',
 			'etat',
+			'salle',
 			'heure',
 			'duree',
 			'enseignant',
