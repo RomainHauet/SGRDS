@@ -12,7 +12,7 @@ class ResetPasswordController extends BaseController
         helper(['form']);
         $userModel = new DirecteurModel();
         $user = $userModel->where('reset_token', $token)
-            ->where('reset_token_expiration >', date('Y-m-d H:i:s'))
+            ->where('reset_expires_at >', date('Y-m-d H:i:s'))
             ->first();
         if ($user) {
             return view('reset_password', ['token' => $token]);
@@ -31,7 +31,7 @@ class ResetPasswordController extends BaseController
 
         $userModel = new DirecteurModel();
         $user = $userModel->where('reset_token', $token)
-            ->where('reset_token_expiration >', date('Y-m-d H:i:s'))
+            ->where('reset_expires_at >', date('Y-m-d H:i:s'))
             ->first();
         if ($user && $password === $confirmPassword) {
 
@@ -40,7 +40,7 @@ class ResetPasswordController extends BaseController
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
             $userModel->set('password', $hashedPassword)
                 ->set('reset_token', null)
-                ->set('reset_token_expiration', null)
+                ->set('reset_expires_at', null)
                 ->update($user['id']);return 'Mot de passe réinitialisé avec succès.';
         } else {
             return 'Erreur lors de la réinitialisation du mot de passe.';
