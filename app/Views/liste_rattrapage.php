@@ -79,6 +79,7 @@
                             <td>
                                 <button><a href="/modifier/<?=$rattrapage['id_R'];?>">Modifier</a></button>
                                 <button><a href="/supprimer/<?=$rattrapage['id_R'];?>">Supprimer</a></button>
+                            </td>
                         </tr>
                     <?php endforeach;?>
                 </table>
