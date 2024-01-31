@@ -28,6 +28,13 @@ class Directeur extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'reset_token' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
+            ],
+            'reset_expires_at' => [
+                'type' => 'DATETIME',
+            ],
         ]);
 
         // ajoute la clé primaire
