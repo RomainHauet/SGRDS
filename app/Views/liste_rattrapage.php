@@ -77,7 +77,11 @@
                             <td><?=$rattrapage['enseignant'];?></td>
                             <td><?=$rattrapage['etat'];?></td>
                             <td>
+                            <?php if (session()->get('isLoggedIn')): ?>
+                                <button><a href="/valider/<?=$rattrapage['id_R'];?>">Valider</a></button>
+                            <?php else: ?>
                                 <button><a href="/modifier/<?=$rattrapage['id_R'];?>">Modifier</a></button>
+                            <?php endif; ?>
                                 <button><a href="/supprimer/<?=$rattrapage['id_R'];?>">Supprimer</a></button>
                             </td>
                         </tr>
