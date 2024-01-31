@@ -37,16 +37,24 @@ class ResetPasswordController extends BaseController
         $user = $userModel->where('reset_token', $token)
             ->where('reset_expires_at >', date('Y-m-d H:i:s'))
             ->first();
+        //dd($user, $password, $confirmPassword);
         if ($user && $password === $confirmPassword) {
 
-// Mettre à jour le mot de passe et réinitialiser le jeton
+            // Mettre à jour le mot de passe et réinitialiser le jeton
 
             //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $userModel->set('password', $password)
-                ->set('reset_token', 'r')
-                ->set('reset_expires_at', '2021-01-01 00:00:00')
-                ->update($user['id_D']);
-            return 'Mot de passe réinitialisé avec succès.';
+            			
+            $user['motDePasse'] = $password;
+			$user['reset_token'] = 'r';
+			$user['reset_expires_at'] = '2021-01-01 00:00:00';
+			$userModel->update($user['id_D'], $user);
+
+            dd($user['id_D'], $user, $password, $confirmPassword);
+            if ($user['motDePasse'] === $password) {
+                return 'Mot de passe réinitialisé avec succès.';
+            } else {
+                return 'Erreur lors de la réinitialisation du mot de passe.';
+            }
         } else {
             return 'Erreur lors de la réinitialisation du mot de passe.';
         }

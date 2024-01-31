@@ -24,4 +24,4 @@ $routes->get('/oubli', 'ForgotPasswordController::index');
 $routes->post('/oubli', 'ForgotPasswordController::sendResetLink');
 
 $routes->get('/reset-password/(:any)', 'ResetPasswordController::index/$1');
-$routes->post('/reset-password/done', 'ResetPasswordController::indexB');
+$routes->post('/reset-password/(:any)', 'ResetPasswordController::updatePassword');
