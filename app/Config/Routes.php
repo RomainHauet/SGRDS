@@ -20,4 +20,4 @@ $routes->get('/ajout', 'AjoutRattrapageController::index');
 $routes->post('/ajout', 'AjoutRattrapageController::ajoutRattrapage');
 
 $routes->get('/oubli', 'ForgotPasswordController::index');
-$routes->post('/oubli', 'ResetPasswordController::index');
+$routes->post('/reset', 'ResetPasswordController::index');
