@@ -54,9 +54,6 @@ class RattrapageSeeder extends Seeder
             ],
         ];
 
-        // Simple Queries
-        //$this->db->query("INSERT INTO rattrapage (semestre, type_DS, type_Rattrapage, ressource, date_DS, date_Rattrapage, etat, heure, duree, enseignant, listeEleve) VALUES(:semestre:, :type_DS:, :type_Rattrapage:, :ressource:, :date_DS:, :date_Rattrapage:, :etat:, :heure:, :duree:, :enseignant:, :listeEleve:)", $data);
-        
         // Using Query Builder
         foreach ($data as $d) {
             $this->db->table('rattrapage')->insert($d);

@@ -102,11 +102,14 @@
                 <option value="R6.06">R6.06   Maintenance applicative</option>
                 <option value="R6.01">R6.01   Stage</option>  
                 <option value="P6.01">P6.01   Portfolio</option>
-
-
-
             </select>
 
+            <br>
+            <label for="type_DS">Type de DS</label>
+            <select name="type_DS" id="type_DS" required>
+                <option value="Devoir sur table">Devoir Surveillé sur table</option>
+                <option value="Devoir machine">Devoir Machine</option>
+            </select>
             <br>
             <label for="date">Date</label>
             <input type="date" name="date" id="date" required>
