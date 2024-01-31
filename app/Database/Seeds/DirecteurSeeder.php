@@ -12,6 +12,8 @@ class DirecteurSeeder extends Seeder
             'identifiant' => 'i',
             'email' => 'tassery.hugo@gmail.com',
             'motDePasse' => 'm',
+            'reset_token' => 'r',
+            'reset_expires_at' => '2021-01-01 00:00:00',
         ];
 
         // Simple Queries

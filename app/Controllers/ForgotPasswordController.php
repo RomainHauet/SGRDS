@@ -27,8 +27,8 @@ class ForgotPasswordController extends BaseController
             $token = bin2hex(random_bytes(16));
             $expiration = date('Y-m-d H:i:s', strtotime('+1 hour'));
             $userModel->set('reset_token', $token)
-                ->set('reset_token_expiration', $expiration)
-                ->update($user['id']);
+                ->set('reset_expires_at', $expiration)
+                ->update($user['id_D']);
 
 // Envoyer l'e-mail avec le lien de réinitialisation
 
@@ -60,4 +60,6 @@ class ForgotPasswordController extends BaseController
             echo 'Adresse e-mail non valide.';
         }
     }
+
+	
 }

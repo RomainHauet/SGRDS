@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\RattrapageModel;
+use App\Models\SemestreModel;
 
 class AjoutRattrapageController extends BaseController
 {
@@ -18,8 +19,16 @@ class AjoutRattrapageController extends BaseController
         {
             return redirect()->to('/connexion');
         }*/
+
+        // Récupère les semestres et toutes les ressources
+        $model = new SemestreModel();
+        $data['semestres'] = $model->getSemestres();
+        $data['ressources'] = $model->getRessources();
+        // Trie les semestres par ordre décroissant
+        sort($data['semestres']);
+
         helper(['form']);
-        echo view('ajout_rattrapage');
+        echo view('ajout_rattrapage', ['semestres' => $data['semestres'], 'ressources' => $data['ressources']]);
     }
 
     public function ajoutRattrapage()

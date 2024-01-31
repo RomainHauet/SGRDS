@@ -19,7 +19,7 @@
                             <div class="titre">
                                 <h2 class="violet">Gestion des rattrapages de DS</h2>
                                 <h3 class="violet">Connexion du chef de département</h3>
-                            </div>                            
+                            </div>
                         </td>
                         <td class="di"><img src="/assets/images/diMini2009.gif" alt="Département Informatique"></td>
                     </tr>

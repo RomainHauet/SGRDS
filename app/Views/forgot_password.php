@@ -7,7 +7,7 @@
 <!-- formulaire d'oubli de mot de passe -->
 <body>
 	<h1>Mot de passe oublié</h1>
-	<form action="/oubli" method="post">
+	<form action="" method="post">
 		<label for="email">Adresse e-mail</label>
 		<input type="email" name="email" id="email">
 		<input type="submit" value="Envoyer">
