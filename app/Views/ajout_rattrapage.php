@@ -8,11 +8,24 @@
         <h1>Ajout d'un rattrapage</h1>
         <form action="<?php echo isset($rattrapage) ? '/modifier/'.$rattrapage['id_R'] : '/ajout'; ?>" method="post">
 
-            <label for="ressource">Ressource</label>
-            <input type="text" name="ressource" id="ressource" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['ressource'].'" '; ?> required>
+            <label for="semestre">Semestre</label>
+            <select name="semestre" id="semestre" required>
+                <?php foreach($semestres as $semestre): ?>
+                    <option value="<?= $semestre ?>"><?= $semestre ?></option>
+                <?php endforeach; ?>
+            </select>
             <br>
-            <label for="date_DS">Date</label>
-            <input type="date" name="date_DS" id="date_DS" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['date_DS'].'"'; ?> required>
+            <label for="ressource">Ressource</label>
+            <select name="ressource" id="ressource" required>
+                <!-- affiche les ressources en fonction du semestre -->
+                <?php foreach($ressources as $ressource): ?>
+                    <option value="<?= $ressource ?>"><?= $ressource ?></option>
+                <?php endforeach; ?>
+            </select>
+
+            <br>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required>
             <br>
             <label for="duree">Durée</label>
             <input type="number" name="duree" id="duree" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['duree'].'"'; ?> required>

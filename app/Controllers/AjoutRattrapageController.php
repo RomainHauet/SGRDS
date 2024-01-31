@@ -24,13 +24,12 @@ class AjoutRattrapageController extends BaseController
 
     public function ajoutRattrapage()
     {
-
         helper(['form']);
         $rules = [
-            'ressource' => 'required|min_length[3]|max_length[50]',
+            'ressource' => 'required',
             'date' => 'required',
             'duree' => 'required',
-            'enseignant' => 'required|min_length[3]|max_length[50]',
+            'enseignant' => 'required',
         ];
 
         if($this->validate($rules))
@@ -42,6 +41,8 @@ class AjoutRattrapageController extends BaseController
                 'duree' => $this->request->getVar('duree'),
                 'enseignant' => $this->request->getVar('enseignant'),
             ];
+
+            // Le rattrapage est ajouté dans la base de données
             $model->save($data);
 
             $session = session();
@@ -51,7 +52,6 @@ class AjoutRattrapageController extends BaseController
         }
         else
         {
-            $data['validation'] = $this->validator;
             echo view('ajout_rattrapage', $data);
         }
     }
