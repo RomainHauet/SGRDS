@@ -10,7 +10,6 @@ class EnseignantModel extends Model
     protected $primaryKey = 'id_Ens';
     
     protected $allowedFields = [
-        'id_Ens',
         'nom',
         'prenom',
         'email',

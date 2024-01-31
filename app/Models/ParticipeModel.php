@@ -10,8 +10,6 @@ class ParticipeModel extends Model
     protected $primaryKey = 'id_R, id_Edt';
     
     protected $allowedFields = [
-        'id_R',
-        'id_Edt',
         'justifie',
     ];
 
