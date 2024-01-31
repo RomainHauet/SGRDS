@@ -3,7 +3,7 @@ body
     background-color: #ADBFCF;
 }
 
-.sortable, .sortable.th, .sortable.td
+.sortable, .sortable thead th, .sortable tr td
 {
     width: 100%;
     text-align: center;

@@ -31,7 +31,6 @@
 
         <br/><br/>
 
-        
         <div class="cadre">
             <div class="pager">
                 <?php if (!empty($rattrapages) && is_array($rattrapages)): ?>
