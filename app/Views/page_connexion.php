@@ -56,6 +56,12 @@
                 <br/>
 
                 <button class="connexion" type="submit">Connexion</button>
+
+                <br/>
+
+                <div class="titre">
+                    <a href="/oubli"><h4>Mot de passe oublié ?</h4></a>
+                </div>
             </div>
         </form>
     </div>
