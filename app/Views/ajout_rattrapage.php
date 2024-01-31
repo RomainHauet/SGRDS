@@ -5,7 +5,12 @@
         <title>Ajout d'un rattrapage</title>
     </head>
     <body>
-        <h1>Ajout d'un rattrapage</h1>
+        <?php if(isset($rattrapage)): ?>
+            <h1>Modification d'un rattrapage</h1>
+        <?php else: ?>
+            <h1>Ajout d'un rattrapage</h1>
+        <?php endif; ?>
+        
         <form action="<?php echo isset($rattrapage) ? '/modifier/'.$rattrapage['id_R'] : '/ajout'; ?>" method="post">
 
             <label for="semestre">Semestre</label>
