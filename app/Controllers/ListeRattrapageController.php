@@ -44,4 +44,14 @@ class ListeRattrapageController extends BaseController
         
         return redirect()->to('/');
     }
+
+    public function supprimerRattrapage($id)
+    {
+        //récupérer le model
+        $modele_rattrapage = new RattrapageModel();
+
+        $modele_rattrapage->delete($id);
+        
+        return redirect()->to('/');
+    }
 }
