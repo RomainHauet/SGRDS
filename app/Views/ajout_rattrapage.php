@@ -12,32 +12,19 @@
         <?php endif; ?>
         
         <form action="<?php echo isset($rattrapage) ? '/modifier/'.$rattrapage['id_R'] : '/ajout'; ?>" method="post">
-
-            <label for="semestre">Semestre</label>
-            <select name="semestre" id="semestre" required>
-                <?php foreach($semestres as $semestre): ?>
-                    <option value="<?= $semestre ?>"><?= $semestre ?></option>
-                <?php endforeach; ?>
-            </select>
-            <br>
-            <label for="ressource">Ressource</label>
-            <select name="ressource" id="ressource" required>
-                <!-- affiche les ressources en fonction du semestre -->
-                <?php foreach($ressources as $ressource): ?>
-                    <option value="<?= $ressource ?>"><?= $ressource ?></option>
-                <?php endforeach; ?>
-            </select>
-
             <br>
             <label for="date">Date</label>
             <input type="date" name="date" id="date" required>
             <br>
-            <label for="duree">Durée</label>
-            <input type="number" name="duree" id="duree" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['duree'].'"'; ?> required>
+            <label for="horaire">Horaire</label>
+            <input type="number" name="horaire" id="horaire" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['horaire'].'"'; ?> required>
             <br>
-            <label for="enseignant">Enseignant</label>
-            <input type="text" name="enseignant" id="enseignant" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['enseignant'].'"'; ?> required>
+            <label for="type">Type</label>
+            <input type="text" name="type" id="type" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['type'].'"'; ?> required>
             <br>
+            <label for="salle">Salle</label>
+            <input type="text" name="salle" id="salle" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['salle'].'"'; ?> required>
+
             <input type="submit" value="Ajouter">
         </form>
 
