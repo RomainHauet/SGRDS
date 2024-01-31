@@ -54,4 +54,30 @@ class ListeRattrapageController extends BaseController
         
         return redirect()->to('/');
     }
+
+    public function valider($id)
+    {
+        //récupérer le model
+        $modele_rattrapage = new RattrapageModel();
+
+        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
+        $rattrapage = $modele_rattrapage->find($id);
+
+        return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
+    }
+
+    public function validerRattrapage($id)
+    {
+        //récupérer le model
+        $modele_rattrapage = new RattrapageModel();
+
+        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
+        $rattrapage = $modele_rattrapage->find($id);
+
+        $rattrapage['etat'] = "Validé";
+
+        $modele_rattrapage->update($id, $rattrapage);
+        
+        return redirect()->to('/');
+    }
 }
