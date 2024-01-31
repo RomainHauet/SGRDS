@@ -8,15 +8,16 @@ class Participe extends Migration
 {
     public function up()
     {
+        // id de l'étudiant et id du rattrapage (clé primaire clé étrangère)
         $this->forge->addField([
             'id_Edt' => [
                 'type' => 'INT',
-                'constraint' => 5,
+                'constraint' => 11,
                 'unsigned' => true,
             ],
             'id_R' => [
                 'type' => 'INT',
-                'constraint' => 5,
+                'constraint' => 11,
                 'unsigned' => true,
             ],
         ]);
