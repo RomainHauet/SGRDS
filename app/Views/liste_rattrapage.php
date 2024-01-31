@@ -81,12 +81,26 @@
                 </table>
             </div>
 
-            <div class="connexion">
-                <button><a href="/connexion">Connexion</a></button>
-            </div>
+            <?php if (session()->get('isLoggedIn')): ?>
+                <div class="connexion">
+                    <button><a href="/deconnexion">Déconnexion</a></button>
+                </div>
+            <?php else: ?>
+                <div class="connexion">
+                    <button><a href="/connexion">Connexion</a></button>
+                </div>
+            <?php endif; ?>
+
         </div>
         <?php else: ?>
             <p>Aucun rattrapage.</p>
+        <?php endif; ?>
+
+        <?php if (session()->get('isLoggedIn')): ?>
+
+            <div class="connexion">
+                <button><a href="/ajout">Ajouter un rattrapage</a></button>
+            </div>
         <?php endif; ?>
     </body>
 </html>

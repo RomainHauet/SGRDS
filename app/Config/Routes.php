@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/connexion', 'ConnexionController::index');
 $routes->post('/connexionForm', 'ConnexionController::loginAuth');
+$routes->get('/deconnexion', 'ConnexionController::deconnexion');
 
 $routes->get('/', 'ListeRattrapageController::index');
 
