@@ -20,3 +20,5 @@ $routes->post('/ajout', 'AjoutRattrapageController::ajoutRattrapage');
 
 $routes->get('/oubli', 'ForgotPasswordController::index');
 $routes->post('/oubli', 'ForgotPasswordController::sendResetLink');
+
+$routes->get('/reset-password/(:any)', 'ResetPasswordController::index/$1');
