@@ -101,7 +101,7 @@
                                 <td><?=$rattrapage['date_DS'];?></td>
                                 <td><?=$rattrapage['type_DS'];?></td>
                                 <td><?=$rattrapage['type_Rattrapage'];?></td>
-                                <td><?=$rattrapage['duree'];?></td>
+                                <td><?=$rattrapage['duree'] . ' h';?></td>
                                 <td><?=$enseignants[ 'id_Ens' == $rattrapage['enseignant'] ]['prenom'] . ' ' . $enseignants[ 'id_Ens' == $rattrapage['enseignant'] ]['nom'];?></td>
                                 <td><?=$rattrapage['salle'];?></td>
                                 <td><?=$rattrapage['etat'];?></td>
