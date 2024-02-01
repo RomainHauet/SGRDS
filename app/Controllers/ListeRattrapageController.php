@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\DirecteurModel;
 use App\Models\EnseignantModel;
 use App\Models\EtudiantModel;
 use App\Models\ParticipeModel;
@@ -99,21 +100,19 @@ class ListeRattrapageController extends BaseController
             $emailService->setTo($étudiant['email']);
 
             $message = " Bonjour " . $étudiant['prenom'] . " " . $étudiant['nom'] . ",
-            Vous avez été convoqué à un rattrapage le  " . $rattrapage['date_DS'] . " de " . $rattrapage['duree'] . " heure(s) par " . $rattrapage['enseignant'] . " 
-            dans la salle " .$rattrapage['salle']. ".
+            Vous avez été convoqué à un rattrapage le  " . $rattrapage['date_DS'] . " de " . $rattrapage['duree'] . " heure(s) par " . $rattrapage['enseignant'] . "
+            dans la salle " . $rattrapage['salle'] . ".
             Merci de vous présenter.";
 
-            $to = $étudiant['email'];
 
             $emailService->setMessage($message);
             if ($emailService->send()) {
-                echo 'E-mail envoyé à '. $étudiant['prenom']." ". $étudiant['nom'] .' avec succès.';
+                echo 'E-mail envoyé à ' . $étudiant['prenom'] . " " . $étudiant['nom'] . ' avec succès.';
             } else {
                 echo $emailService->printDebugger();
             }
 
         }
-        
 
         return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
     }
@@ -145,7 +144,34 @@ class ListeRattrapageController extends BaseController
         $rattrapage['etat'] = "Neutralisé";
 
         $modele_rattrapage->update($id, $rattrapage);
-        
+
+        //Envoi d'un mail au directeur
+
+        $emailDir = 'tassery.hugo@gmail.com';
+
+        $directeurModel = new DirecteurModel();
+        $directeur = $directeurModel->where('email', $emailDir)->first();
+        $emailService = \Config\Services::email();
+
+        $message = " Bonjour " . $directeur['prenom'] . " " . $directeur['nom'] . ",
+            Le rattrapage du " . $rattrapage['date_DS'] . " de " . $rattrapage['duree'] . " heure(s) a été annulé par " . $rattrapage['enseignant'] . "
+            Pour la raison suivante : " . $rattrapage['commentaire'] . "
+            Merci de votre compréhension.";
+
+        $from = 'tassery.hugo@gmail.com';
+        $to = $directeur['email'];
+        $subject = 'Annulation d\'un rattrapage le ' . $rattrapage['date_DS'].' par '.$rattrapage['enseignant'];
+
+        $emailService->setTo($to);
+        $emailService->setFrom($from);
+        $emailService->setSubject($subject);
+        $emailService->setMessage($message);
+        if ($emailService->send()) {
+            echo 'E-mail envoyé avec succès.';
+        } else {
+            echo $emailService->printDebugger();
+        }
+
         return redirect()->to('/');
     }
 
