@@ -202,9 +202,8 @@
                                                     <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
-                                        <?php else: ?>
-                                            <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
                                         <?php endif; ?>
+                                            <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
