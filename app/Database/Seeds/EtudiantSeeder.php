@@ -17,7 +17,7 @@ class EtudiantSeeder extends Seeder
             [
                 'nom' => 'Dupont',
                 'prenom' => 'Jean',
-                'email' => 'jean.dupont@univ-lehavre.fr',
+                'email' => 'romain.hauet@etu.univ-lehavre.fr',
             ],
         ];
 

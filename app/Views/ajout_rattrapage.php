@@ -158,7 +158,7 @@
 
                     <div class="titre" style="display:flex">
                         <label for="duree">Durée</label>
-                        <input type="number" name="duree" id="duree" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['duree'].'"'; ?> required>
+                        <input type="number" name="duree" id="duree" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['duree'].'"'; ?> min="1" required>
                     </div>
 
                     <br/>
