@@ -44,11 +44,9 @@ class AjoutRattrapageController extends BaseController
             'semestre' => $this->request->getVar('semestre'),
             'ressource' => $this->request->getVar('ressource'),
             'type_DS' => $this->request->getVar('type_DS'),
-            'salle' => 'Aucune',
-            'heure' => '0:01',
             'date_DS' => $this->request->getVar('date_DS'),
             'duree' => $this->request->getVar('duree'),
-            'enseignant' => $enseignantModel->getEnseignant($this->request->getVar('enseignant')),
+            'enseignant' => $this->request->getVar('enseignant'),
             'etat' => 'En attente',
             'listeEleve' => 'Personne',
         ];
