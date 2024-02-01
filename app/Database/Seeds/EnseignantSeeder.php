@@ -20,8 +20,8 @@ class EnseignantSeeder extends Seeder
                 'email' => 'jean.dupont@univ-lehavre.fr',
             ],
             [
-                'nom' => 'DuJardin',
-                'prenom' => 'Jean',
+                'nom' => 'Hauet',
+                'prenom' => 'Romain',
                 'email' => 'romain.hauet@etu.univ-lehavre.fr',
             ],
         ];

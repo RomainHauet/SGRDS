@@ -94,6 +94,30 @@ class ListeRattrapageController extends BaseController
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapage = $modele_rattrapage->find($id);
 
+
+        return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
+    }
+
+    public function validerRattrapage($id)
+    {
+        //récupérer le model
+        $modele_rattrapage = new RattrapageModel();
+
+        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
+        $rattrapage = $modele_rattrapage->find($id);
+
+        $rattrapage['commentaire'] = $this->request->getVar('commentaire');
+
+        $rattrapage['salle'] = $this->request->getVar('salle');
+        $rattrapage['type_Rattrapage'] = $this->request->getVar('type_Rattrapage');
+        $rattrapage['heure'] = $this->request->getVar('heure');
+        $rattrapage['date_Rattrapage'] = $this->request->getVar('date_Rattrapage');
+
+        $rattrapage['etat'] = "Validé";
+
+        $modele_rattrapage->update($id, $rattrapage);
+
+
         //Envoi d'un mail aux etudiants
 
         $participeModel = new ParticipeModel();
@@ -128,28 +152,6 @@ class ListeRattrapageController extends BaseController
             }
 
         }
-
-        return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
-    }
-
-    public function validerRattrapage($id)
-    {
-        //récupérer le model
-        $modele_rattrapage = new RattrapageModel();
-
-        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
-        $rattrapage = $modele_rattrapage->find($id);
-
-        $rattrapage['commentaire'] = $this->request->getVar('commentaire');
-
-        $rattrapage['salle'] = $this->request->getVar('salle');
-        $rattrapage['type_Rattrapage'] = $this->request->getVar('type_Rattrapage');
-        $rattrapage['heure'] = $this->request->getVar('heure');
-        $rattrapage['date_Rattrapage'] = $this->request->getVar('date_Rattrapage');
-
-        $rattrapage['etat'] = "Validé";
-
-        $modele_rattrapage->update($id, $rattrapage);
 
         return redirect()->to('/');
     }

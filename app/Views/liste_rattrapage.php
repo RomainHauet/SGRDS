@@ -137,6 +137,7 @@
             <div class="cadre">
                 <div class="pager">
                     <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout';">Ajouter un rattrapage</button>
+                    <br/><br/>
                     <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout_enseignant';">Gérer les enseignants</button>
                 </div>
                 <div style="width:20%;padding:10px"></div>
