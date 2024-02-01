@@ -40,19 +40,18 @@
                             <input type="text" name="identifiant" required>
                         </div>
 
-                        <?php if(session()->getFlashdata('utilisateurError')): ?>
-                            <div class="alert alert-danger"><?=session()->getFlashdata('utilisateurError') ?></div>
-                        <?php endif; ?>
-
                         <br/>
 
                         <div class="titre" style="display:flex">
                             <label for="password">Mot de passe:</label>
                             <input type="password" name="motDePasse" required>
                         </div>
-                        <?php if(session()->getFlashdata('mdpError')): ?>
-                            <div class="alert alert-danger"><?=session()->getFlashdata('mdpError') ?></div>
-                        <?php endif; ?>
+
+                        <br/>
+
+                        <div class="titre" style="display:flex">
+                            <label class="erreur" style="color:<?php echo $couleur?>"><?php echo $message?></label>
+                        </div>
 
                         <br/>
 
