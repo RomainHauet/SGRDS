@@ -63,9 +63,14 @@
                         <input type="number" name="salle" id="salle" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['salle'].'"'; ?> required>
                     </div>
 
+                    <div class="titre" style="display:flex">
+                        <label for="commentaire">Commentaire (si non rattrapage)</label>
+                        <textarea name="commentaire" id="commentaire" rows="5" cols="33" maxlength="255"></textarea>
+                    </div>
                     <br/>
 
-                    <button class="connexion" type="submit">Ajouter</button>
+                    <button class="connexion" type="button" onclick="window.location.href='/non_rattrapage/<?php echo $rattrapage['id_R']; ?>';"> Je ne veux pas faire de rattrapage</button>                    
+                    <button class="connexion" type="submit">Valider rattrapage</button>
                 </form>
             </div>
             <div class="connexion">

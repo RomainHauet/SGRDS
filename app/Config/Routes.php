@@ -14,6 +14,7 @@ $routes->post('/modifier/(:num)', 'ListeRattrapageController::modifierRattrapage
 $routes->get('/supprimer/(:num)', 'ListeRattrapageController::supprimerRattrapage/$1');
 $routes->get('/valider/(:num)', 'ListeRattrapageController::valider/$1');
 $routes->post('/valider/(:num)', 'ListeRattrapageController::validerRattrapage/$1');
+$routes->get('/non_rattrapage/(:num)', 'ListeRattrapageController::nonRattrapage/$1');
 
 $routes->get('/', 'ListeRattrapageController::index');
 

@@ -96,4 +96,21 @@ class ListeRattrapageController extends BaseController
         
         return redirect()->to('/');
     }
+
+    public function nonRattrapage($id)
+    {
+        //récupérer le model
+        $modele_rattrapage = new RattrapageModel();
+
+        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
+        $rattrapage = $modele_rattrapage->find($id);
+
+        $rattrapage['commentaire'] = $this->request->getVar('commentaire');
+        $rattrapage['etat'] = "Neutralisé";
+
+        $modele_rattrapage->update($id, $rattrapage);
+        
+        return redirect()->to('/');
+    }
+
 }
