@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\EnseignantModel;
 use App\Models\RattrapageModel;
 use App\Models\SemestreModel;
+use App\Models\EtudiantModel;
 
 class AjoutRattrapageController extends BaseController
 {
@@ -24,14 +25,24 @@ class AjoutRattrapageController extends BaseController
         // Récupère les semestres et toutes les ressources
         $semestre = new SemestreModel();
         $enseignant = new EnseignantModel();
+        $etudiants = new EtudiantModel();
+
         $data['semestres'] = $semestre->getSemestres();
         $data['ressources'] = $semestre->getRessources();
         $data['enseignants'] = $enseignant->getEnseignants();
+        $data['etudiants'] = $etudiants->getEtudiants();
+
         // Trie les semestres par ordre décroissant
-        sort($data['semestres']);
+        sort($data['semestres']);        
 
         helper(['form']);
-        echo view('ajout_rattrapage', ['semestres' => $data['semestres'], 'ressources' => $data['ressources'], 'enseignants' => $data['enseignants']]);
+        echo view('ajout_rattrapage',
+        [
+            'semestres' => $data['semestres'],
+            'ressources' => $data['ressources'],
+            'enseignants' => $data['enseignants'],
+            'etudiants' => $data['etudiants'],
+        ]);
     }
 
     public function ajoutRattrapage()
@@ -40,6 +51,8 @@ class AjoutRattrapageController extends BaseController
 
         $rattrapageModel = new RattrapageModel();
         $enseignantModel = new EnseignantModel();
+        $etudiants = new EtudiantModel();
+
         $data = [
             'semestre' => $this->request->getVar('semestre'),
             'ressource' => $this->request->getVar('ressource'),
@@ -48,8 +61,11 @@ class AjoutRattrapageController extends BaseController
             'duree' => $this->request->getVar('duree'),
             'enseignant' => $this->request->getVar('enseignant'),
             'etat' => 'En attente',
-            'listeEleve' => 'Personne',
         ];
+
+        // Récupère tous les étudiants du semestre sélectionné
+        $data['etudiants'] = $etudiants->getEtudiants();
+        
 
         // Le rattrapage est ajouté dans la base de données
         $rattrapageModel->save($data);

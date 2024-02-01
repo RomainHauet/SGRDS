@@ -13,7 +13,7 @@ class ResetPasswordController extends BaseController
             ->where('reset_expires_at >', date('Y-m-d H:i:s'))
             ->first();
         if ($user) {
-            return view('reset_password', ['token' => $token]);
+            return view('reset_password', ['token' => $token, 'couleur' => 'black', 'message' => '']);
         } else {
             return 'Lien de réinitialisation non valide.';
         }
@@ -38,8 +38,8 @@ class ResetPasswordController extends BaseController
             ->where('reset_expires_at >', date('Y-m-d H:i:s'))
             ->first();
         //dd($user, $password, $confirmPassword);
-        if ($user && $password === $confirmPassword) {
-
+        if ($user && $password === $confirmPassword)
+        {
             // Mettre à jour le mot de passe et réinitialiser le jeton
 
             //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
@@ -49,13 +49,18 @@ class ResetPasswordController extends BaseController
 			$user['reset_expires_at'] = '2021-01-01 00:00:00';
 			$userModel->update($user['id_D'], $user);
 
-            if ($user['motDePasse'] === $password) {
-                return 'Mot de passe réinitialisé avec succès.';
-            } else {
-                return 'Erreur lors de la réinitialisation du mot de passe.';
+            if ($user['motDePasse'] === $password)
+            {
+                return view('reset_password_success', ['token' => $token, 'message' => 'Mot de passe réinitialisé avec succès !']);
             }
-        } else {
-            return 'Erreur lors de la réinitialisation du mot de passe.';
+            else
+            {
+                return view('reset_password_success', ['token' => $token, 'message' => 'Erreur avec la base de données, merci de réessayer ultérieurement.']);
+            }
+        }
+        else
+        {
+            return view('reset_password', ['token' => $token, 'couleur' => 'red', 'message' => 'Les 2 mots de passe ne sont pas identiques.']);
         }
     }
 }
