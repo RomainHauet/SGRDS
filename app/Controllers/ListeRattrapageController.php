@@ -15,8 +15,11 @@ class ListeRattrapageController extends BaseController
 
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapages = $modele_rattrapage->findAll();
+        //pour chaque rattrapage, on récupère le nom de l'enseignant
+        $enseignant = new EnseignantModel();
+        $enseignants = $enseignant->getEnseignants();
 
-        return view('liste_rattrapage', ['rattrapages' => $rattrapages]);
+        return view('liste_rattrapage', ['rattrapages' => $rattrapages, 'enseignants' => $enseignants]);
     }
 
     public function modifier($id): string

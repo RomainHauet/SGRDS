@@ -20,7 +20,7 @@
                                 <div class="titre">
                                     <h2 class="violet">Gestion des rattrapages de DS</h2>
                                     <h3 class="violet">Liste des rattrapages</h3>
-                                </div>
+                                </div>                            
                             </td>
                             <td class="di"><img src="/assets/images/diMini2009.gif" alt="Département Informatique"></td>
                         </tr>
@@ -69,12 +69,12 @@
                                 </th>
                             </tr>
                         </thead>
+                        <tbody>
                         <?php foreach ($rattrapages as $rattrapage): ?>
                             <tr>
                                 <td><?=$rattrapage['ressource'];?></td>
                                 <td><?=$rattrapage['date_DS'];?></td>
                                 <td><?=$rattrapage['duree'];?></td>
-                                <td><?=$rattrapage['enseignant'];?></td>
                                 <td><?=$rattrapage['etat'];?></td>
                                 <td>
                                     <?php if (session()->get('isLoggedIn')): ?>
@@ -86,6 +86,7 @@
                                 </td>
                             </tr>
                         <?php endforeach;?>
+                        </tbody>
                     </table>
                 <?php else: ?>
                     <p>Aucun rattrapage.</p>
@@ -107,6 +108,7 @@
             <div class="cadre">
                 <div class="pager">
                     <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout';">Ajouter un rattrapage</button>
+                    <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout_enseignant';">Gérer les enseignants</button>
                 </div>
                 <div style="width:20%;padding:10px"></div>
             </div>

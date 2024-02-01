@@ -3,14 +3,14 @@ namespace App\Controllers;
 
 use App\Models\EnseignantModel;
 
-class Enseignant extends BaseController
+class AjoutProfController extends BaseController
 {
     public function index()
     {
-        $model = new EnseignantModel();
+        $model_enseignant = new EnseignantModel();
 
-        $enseignants = $model->findAll();
-        return view('enseignant/overview', ['enseignants' => $enseignants]);
+        $enseignants = $model_enseignant->findAll();
+        echo view('ajout_enseignant', ['enseignants' => $enseignants]);
     }
 
     public function view($id = null)
@@ -32,28 +32,35 @@ class Enseignant extends BaseController
 
     public function create()
     {
-        $model = new EnseignantModel();
+        $model_enseignant = new EnseignantModel();
+        $enseignants = $model_enseignant->findAll();
 
-        if ($this->request->getPost()([
-            'nom' => 'required|min_length[3]|max_length[255]',
-            'prenom' => 'required|min_length[3]|max_length[255]',
+        if ($this->request->getPost() && $this->validate([
+            'nom' => 'required|min_length[1]|max_length[255]',
+            'prenom' => 'required|min_length[1]|max_length[255]',
             'email' => 'required|min_length[3]|max_length[255]',
-        ])) {
-            $model->save([
+        ]) === true) {
+            $model_enseignant->save([
                 'nom' => $this->request->getPost('nom'),
                 'prenom' => $this->request->getPost('prenom'),
                 'email' => $this->request->getPost('email'),
             ]);
 
-            echo view('templates/header', ['title' => 'Enseignant ajouté']);
-            echo view('enseignant/success');
-            echo view('templates/footer');
+			return redirect()->to('/ajout_enseignant');
+
         } else {
-            echo view('templates/header', ['title' => 'Ajouter un enseignant']);
-            echo view('enseignant/create');
-            echo view('templates/footer');
+			return redirect()->to('/ajout_enseignant');
         }
     }
+
+	public function supprimerEnseignant($id)
+	{
+		$model_enseignant = new EnseignantModel();
+
+		$model_enseignant->delete($id);
+
+		return redirect()->to('/ajout_enseignant');
+	}
 
     public function edit($id = null)
     {
