@@ -3,13 +3,11 @@
 namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
-use App\Models\EneignantModel;
 
 class RattrapageSeeder extends Seeder
 {
     public function run()
     {
-        $enseignantModel = new EnseignantModel();
         $data = [
             [
                 'semestre' => 'S1',
@@ -18,8 +16,7 @@ class RattrapageSeeder extends Seeder
                 'date_DS' => '2021-01-01',
                 'etat' => 'En attente',
                 'duree' => 1,
-                // récupérer l'id de l'un des enseignants
-                'enseignant' => $enseignantModel->getEnseignant(1),
+                'enseignant' => 'enseignant1',
                 'listeEleve' => 'listeEleve1',
             ],
             [
