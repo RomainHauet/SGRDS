@@ -167,7 +167,7 @@
                         <label for="enseignant">Enseignant</label>
                         <select name="enseignant" id="enseignant" required>
                             <?php foreach($enseignants as $enseignant): ?>
-                                <?php if(isset($rattrapage) && $enseignant['id_Ens'] == $rattrapage['enseignant']['id_Ens']): ?>
+                                <?php if(isset($rattrapage) && $rattrapage['enseignant'] == $enseignant['id_Ens']): ?>
                                     <option value="<?= $enseignant['id_Ens'] ?>" selected><?= $enseignant['nom'].' '.$enseignant['prenom'] ?></option>
                                 <?php else: ?>
                                     <option value="<?= $enseignant['id_Ens'] ?>"><?= $enseignant['nom'].' '.$enseignant['prenom'] ?></option>
