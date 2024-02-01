@@ -10,6 +10,11 @@ body
     border: solid black 1px;
 }
 
+.eleves, .eleves thead th, .eleves tr td
+{
+    border: solid black 1px;
+}
+
 .univ
 {
     text-align: bottom;

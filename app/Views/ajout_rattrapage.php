@@ -179,8 +179,8 @@
                     <br/>
                     
                     <!-- Affiche une table qui liste touts les etudiants avec à côté 2 boutton radio (justifié ou non) -->
-                    <label for="etudiants">Liste des étudiants</label>
-                    <table>
+                    <h3 class="violet" style="text-align:center">Liste des étudiants</h3>
+                    <table class="eleves" style="width:80%; margin-left:10%; text-align:center">
                         <thead>
                             <tr>
                                 <th>Nom</th>
@@ -194,7 +194,7 @@
                                     <td><?= $etudiant['nom'] ?></td>
                                     <td><?= $etudiant['prenom'] ?></td>
                                     <td>
-                                        <input type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
+                                        <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
