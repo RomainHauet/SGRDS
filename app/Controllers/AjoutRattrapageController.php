@@ -6,6 +6,7 @@ use App\Models\EnseignantModel;
 use App\Models\RattrapageModel;
 use App\Models\SemestreModel;
 use App\Models\EtudiantModel;
+use App\Models\ParticipeModel;
 
 class AjoutRattrapageController extends BaseController
 {
@@ -51,7 +52,8 @@ class AjoutRattrapageController extends BaseController
 
         $rattrapageModel = new RattrapageModel();
         $enseignantModel = new EnseignantModel();
-        $etudiants = new EtudiantModel();
+        $etudiantModel = new EtudiantModel();
+        $participeModel = new ParticipeModel();
 
         $data = [
             'semestre' => $this->request->getVar('semestre'),
@@ -63,12 +65,33 @@ class AjoutRattrapageController extends BaseController
             'etat' => 'En attente',
         ];
 
-        // Récupère tous les étudiants du semestre sélectionné
-        $data['etudiants'] = $etudiants->getEtudiants();
-        
-
         // Le rattrapage est ajouté dans la base de données
         $rattrapageModel->save($data);
+
+        // Récupère tous les étudiants du semestre sélectionné
+        if  ($this->request->getVar('etudiants') != null)
+        {
+            // Récupère les étudiants sélectionnés
+            $etudiants = $etudiantModel->getEtudiants();
+
+            // Récupère les étudiants du semestre sélectionné
+            $data['etudiants'] = $this->request->getVar('etudiants');
+
+            foreach ($etudiants as $etudiant)
+            {
+                // je vérifie si l'id de l'étudiant est dans le tableau des étudiants sélectionnés
+                if( in_array($etudiant['id_Edt'], $data['etudiants']))
+                {
+                    // dd($etudiant['id_Edt'], $rattrapageModel->getInsertID());
+                    // Ajoute à la base de données participe le rattrapage et l'étudiant et le booléen
+                    $participeModel->save([
+                        'id_Edt' => $etudiant['id_Edt'],
+                        'id_R' => $rattrapageModel->getInsertID(),
+                        'valide' => 1,
+                    ]);
+                }
+            }
+        }
 
         $session = session();
         $session->setFlashdata('success', 'Rattrapage ajouté avec succès');
