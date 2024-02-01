@@ -105,6 +105,7 @@ class ListeRattrapageController extends BaseController
             dans la salle " . $rattrapage['salle'] . ".
             Merci de vous présenter.";
 
+                $emailService->setFrom($from);
                 $emailService->setMessage($message);
                 if ($emailService->send()) {
                     echo 'E-mail envoyé à ' . $etudiant['prenom'] . " " . $etudiant['nom'] . ' avec succès.';
