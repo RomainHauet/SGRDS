@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class EtudiantModel extends Model
 {
-    protected $table = 'rattrapage';
+    protected $table = 'etudiant';
     protected $primaryKey = 'id_Edt';
     
     protected $allowedFields = [
@@ -20,4 +20,9 @@ class EtudiantModel extends Model
         'prenom' => 'required',
         'email' => 'required',
     ];
+
+    public function getEtudiants()
+    {
+        return $this->findAll();
+    }
 }

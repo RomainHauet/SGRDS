@@ -40,7 +40,7 @@ class ResetPasswordController extends BaseController
             // Mettre à jour le mot de passe et réinitialiser le jeton
 
             //$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            			
+
             $user['motDePasse'] = $password;
 			$user['reset_token'] = 'r';
 			$user['reset_expires_at'] = '2021-01-01 00:00:00';

@@ -18,7 +18,7 @@
 			'heure',
 			'duree',
 			'enseignant',
-			'listeEleve',
+			'commentaire',
 		];
 
 		protected $validationRules = [
@@ -28,6 +28,5 @@
 			'date_DS' => 'required',
 			'etat' => 'required',
 			'enseignant' => 'required',
-			'listeEleve' => 'required',
 		];
 	}
