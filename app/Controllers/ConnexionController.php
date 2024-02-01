@@ -8,8 +8,9 @@ class ConnexionController extends BaseController
     public function index()
     {
         helper(['form']);
-        echo view('page_connexion');
+        return view('page_connexion', ['couleur' => 'black', 'message' => '']);
     }
+
     public function loginAuth()
     {
         $session = session();
@@ -29,14 +30,12 @@ class ConnexionController extends BaseController
             }
             else
             {
-                $session->setFlashdata('mdpError', 'Mot de passe incorrect.');
-                return redirect()->to('/connexion');
+                return view('page_connexion', ['couleur' => 'red', 'message' => 'Mot de passe incorrect.']);
             }
         }
         else
         {
-            $session->setFlashdata('utilisateurError', 'Utilisateur n\'existe pas.');
-            return redirect()->to('/connexion');
+            return view('page_connexion', ['couleur' => 'red', 'message' => 'Utilisateur inexistant.']);
         }
     }
 
