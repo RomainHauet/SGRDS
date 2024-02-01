@@ -178,9 +178,33 @@
 
                     <br/>
                     
+                    <!-- Affiche une table qui liste touts les etudiants avec à côté 2 boutton radio (justifié ou non) -->
+                    <label for="etudiants">Liste des étudiants</label>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Justifié</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach($etudiants as $etudiant): ?>
+                                <tr>
+                                    <td><?= $etudiant['nom'] ?></td>
+                                    <td><?= $etudiant['prenom'] ?></td>
+                                    <td>
+                                        <input type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    
                     <button class="connexion" type="submit">Ajouter</button>
                 </form>
             </div>
+        
             <div class="connexion">
                 <button onclick="window.location.href='/';">Retour à la liste</button>
             </div>

@@ -60,8 +60,10 @@ class Rattrapage extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ],
-            'listeEleve' => [
+            'commentaire' => [
                 'type' => 'VARCHAR',
+                'constraint' => '255',
+                'null' => true,
             ],
         ]);
 
