@@ -16,13 +16,15 @@ class ListeRattrapageController extends BaseController
         $modele_rattrapage = new RattrapageModel();
         $enseignant = new EnseignantModel();
         $etudiant = new EtudiantModel();
+        $participe = new ParticipeModel();
 
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapages = $modele_rattrapage->findAll();
         $enseignants = $enseignant->getEnseignants();
         $etudiants = $etudiant->getEtudiants();
+        $participes = $participe->getParticipes();
 
-        return view('liste_rattrapage', ['rattrapages' => $rattrapages, 'enseignants' => $enseignants, 'etudiants' => $etudiants]);
+        return view('liste_rattrapage', ['rattrapages' => $rattrapages, 'enseignants' => $enseignants, 'etudiants' => $etudiants, 'participes' => $participes]);
     }
 
     public function modifier($id): string
@@ -36,11 +38,14 @@ class ListeRattrapageController extends BaseController
         $semestre = new SemestreModel();
         $enseignant = new EnseignantModel();
         $etudiant = new EtudiantModel();
+        $participe = new ParticipeModel();
 
         $data['semestres'] = $semestre->getSemestres();
         $data['ressources'] = $semestre->getRessources();
         $data['enseignants'] = $enseignant->getEnseignants();
         $data['etudiants'] = $etudiant->getEtudiants();
+        $data['participes'] = $participe->getParticipes();
+        
         // Trie les semestres par ordre décroissant
         sort($data['semestres']);
 
@@ -51,7 +56,8 @@ class ListeRattrapageController extends BaseController
             'ressources' => $data['ressources'],
             'enseignants' => $data['enseignants'],
             'rattrapage' => $rattrapage,
-            'etudiants' => $data['etudiants']
+            'etudiants' => $data['etudiants'],
+            'participes' => $data['participes'],
         ]);
     }
 

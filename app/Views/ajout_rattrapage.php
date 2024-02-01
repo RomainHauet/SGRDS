@@ -194,13 +194,20 @@
                                     <td><?= $etudiant['nom'] ?></td>
                                     <td><?= $etudiant['prenom'] ?></td>
                                     <td>
-                                        <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
+                                        <?php foreach($participes as $participe): ?>
+                                            <?php if($etudiant['id_Edt'] == $participe['id_Edt']): ?>
+                                                <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>" checked>
+                                            <?php else: ?>
+                                                <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
                     
+                    </br>
                     <button class="connexion" type="submit">Ajouter</button>
                 </form>
             </div>

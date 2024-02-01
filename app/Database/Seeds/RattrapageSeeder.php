@@ -27,7 +27,6 @@ class RattrapageSeeder extends Seeder
                 'etat' => 'En attente',
                 'duree' => 2,
                 'enseignant' => 'enseignant2',
-                'commentaire' => 'commentaire1',
             ],
             [
                 'semestre' => 'S3',
@@ -37,7 +36,6 @@ class RattrapageSeeder extends Seeder
                 'etat' => 'En attente',
                 'duree' => 3,
                 'enseignant' => 'enseignant3',
-                'commentaire' => 'commentaire1',
             ],
         ];
 

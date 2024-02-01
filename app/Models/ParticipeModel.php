@@ -19,4 +19,9 @@ class ParticipeModel extends Model
         'id_Edt',
         'id_R',
     ];
+
+    public function getParticipes()
+    {
+        return $this->findAll();
+    }
 }

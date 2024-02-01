@@ -27,11 +27,13 @@ class AjoutRattrapageController extends BaseController
         $semestre = new SemestreModel();
         $enseignant = new EnseignantModel();
         $etudiants = new EtudiantModel();
+        $participeModel = new ParticipeModel();
 
         $data['semestres'] = $semestre->getSemestres();
         $data['ressources'] = $semestre->getRessources();
         $data['enseignants'] = $enseignant->getEnseignants();
         $data['etudiants'] = $etudiants->getEtudiants();
+        $data['participes'] = $participeModel->getParticipes();
 
         // Trie les semestres par ordre décroissant
         sort($data['semestres']);        
@@ -43,6 +45,7 @@ class AjoutRattrapageController extends BaseController
             'ressources' => $data['ressources'],
             'enseignants' => $data['enseignants'],
             'etudiants' => $data['etudiants'],
+            'participes' => $data['participes'],
         ]);
     }
 
