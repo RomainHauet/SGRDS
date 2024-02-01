@@ -24,13 +24,9 @@
 		protected $validationRules = [
 			'semestre' => 'required',
 			'type_DS' => 'required',
-			//'type_Rattrapage' => 'required',
 			'ressource' => 'required',
 			'date_DS' => 'required',
-			//'date_Rattrapage' => 'required',
 			'etat' => 'required',
-			//'heure' => 'required',
-			//'duree' => 'required',
 			'enseignant' => 'required',
 			'listeEleve' => 'required',
 		];

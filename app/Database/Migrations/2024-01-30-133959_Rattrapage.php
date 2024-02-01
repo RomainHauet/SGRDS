@@ -27,6 +27,7 @@ class Rattrapage extends Migration
             'type_Rattrapage' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
             'ressource' => [
                 'type' => 'VARCHAR',
@@ -37,6 +38,7 @@ class Rattrapage extends Migration
             ],
             'date_Rattrapage' => [
                 'type' => 'DATE',
+                'null' => true,
             ],
             'etat' => [
                 'type' => 'VARCHAR',
@@ -45,9 +47,11 @@ class Rattrapage extends Migration
             'salle' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
+                'null' => true,
             ],
             'heure' => [
-                'type' => 'NUMERIC',
+                'type' => 'TIME',
+                'null' => true,
             ],
             'duree' => [
                 'type' => 'NUMERIC',
