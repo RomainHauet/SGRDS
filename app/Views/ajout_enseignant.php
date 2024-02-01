@@ -18,8 +18,8 @@
                             </td>
                             <td>
                                 <div class="titre">
-                                    <h2 class="violet">Gestion des rattrapages de DS</h2>
-                                    <h3 class="violet">Liste des rattrapages</h3>
+                                    <h2 class="violet">Gestion des enseignants</h2>
+                                    <h3 class="violet">Liste des enseignants</h3>
                                 </div>
                             </td>
                             <td class="di"><img src="/assets/images/diMini2009.gif" alt="Département Informatique"></td>
@@ -33,7 +33,7 @@
 
         <div class="cadre">
             <div class="pager">
-                <?php if (!empty($enseignant) && is_array($enseignant)): ?>
+                <?php if (!empty($enseignants) && is_array($enseignants)): ?>
                     <table class="sortable">
                         <thead>
                             <tr>
@@ -57,22 +57,65 @@
                                 </th>
                             </tr>
                         </thead>
-                        <?php foreach ($rattrapages as $rattrapage): ?>
+                        <?php foreach ($enseignants as $enseignant): ?>
                             <tr>
-                                <td><?=$enseignant['Nom'];?></td>
-                                <td><?=$enseignant['Prénom'];?></td>
-                                <td><?=$enseignant['Email'];?></td>
+                                <td><?=$enseignant['nom'];?></td>
+                                <td><?=$enseignant['prenom'];?></td>
+                                <td><?=$enseignant['email'];?></td>
                                 <td>
-                                        <button onclick="window.location.href='/modifier/<?=$rattrapage['id_R'];?>';">Modifier</button>
-                                        <button onclick="window.location.href='/supprimer/<?=$rattrapage['id_R'];?>';">Supprimer</button>
+                                    <button onclick="window.location.href='/supprimerEnseignant/<?=$enseignant['id_Ens'];?>';">Supprimer</button>
                                 </td>
                             </tr>
                         <?php endforeach;?>
                     </table>
                 <?php else: ?>
                     <p>Aucun Enseignant sur la base de données.</p>
-                <?php endif; ?>
+                <?php endif;?>
             </div>
+			<div class="connexion">
+                    <button onclick="window.location.href='/';">Retour à l'accueil</button>
+            </div>
+        </div>
+
+		<div class="titre">
+			<h3 class="violet">Ajout d'un enseignant</h3>
+		</div>
+
+        <br/><br/>
+
+        <div class="cadre">
+            <div class="pager">
+                <form action='/ajout_enseignant/' " method="post">
+
+					<br/>
+
+                    <div class="titre" style="display:flex">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom" required>
+                    </div>
+
+                    <br/>
+
+                    <div class="titre" style="display:flex">
+                        <label for="prenom">Prenom</label>
+                        <input type="text" name="prenom" id="prenom" required>
+                    </div>
+
+                    <br/>
+
+                    <div class="titre" style="display:flex">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <br/>
+
+                    <button class="connexion" type="submit">Ajouter</button>
+                </form>
+            </div>
+            <div class="connexion">
+                <!--<button onclick="window.location.href='/';">Retour à la liste</button>-->
+            </div
         </div>
     </body>
 </html>

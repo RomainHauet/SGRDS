@@ -142,8 +142,8 @@
                     <div class="titre" style="display:flex">
                         <label for="type_DS">Type de DS</label>
                         <select name="type_DS" id="type_DS" required>
-                            <option value="Devoir Surveillé">Devoir Surveillé</option>
-                            <option value="Devoir Machine">Devoir Machine</option>
+                            <option value="Devoir sur table">Devoir sur table</option>
+                            <option value="Devoir machine">Devoir machine</option>
                         </select>
                     </div>
 
