@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\DirecteurModel;
 use App\Models\EnseignantModel;
 use App\Models\EtudiantModel;
 use App\Models\ParticipeModel;
@@ -91,41 +92,6 @@ class ListeRattrapageController extends BaseController
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapage = $modele_rattrapage->find($id);
 
-        //Envoi d'un mail aux étudiants
-
-        $participeModel = new ParticipeModel();
-        $participe = $participeModel->where('id_R', $id)->findAll();
-
-        $étudiantModel = new EtudiantModel();
-        // on récupère tous les étudiants qui participent au rattrapage
-        $emailService = \Config\Services::email();
-
-        $from = 'tassery.hugo@gmail.com';
-        $subject = 'Ajout d\'un rattrapage le ' . $rattrapage['date_DS'];
-        $emailService->setFrom($from);
-        $emailService->setSubject($subject);
-
-        for ($i = 0; $i < count($participe); $i++) {
-            $étudiant = $étudiantModel->where('id_Edt', $participe[$i]['id_Edt'])->findAll();
-            $emailService->setTo($étudiant['email']);
-
-            $message = " Bonjour " . $étudiant['prenom'] . " " . $étudiant['nom'] . ",
-            Vous avez été convoqué à un rattrapage le  " . $rattrapage['date_DS'] . " de " . $rattrapage['duree'] . " heure(s) par " . $rattrapage['enseignant'] . " 
-            dans la salle " .$rattrapage['salle']. ".
-            Merci de vous présenter.";
-
-            $to = $étudiant['email'];
-
-            $emailService->setMessage($message);
-            if ($emailService->send()) {
-                echo 'E-mail envoyé à '. $étudiant['prenom']." ". $étudiant['nom'] .' avec succès.';
-            } else {
-                echo $emailService->printDebugger();
-            }
-
-        }
-        
-
         return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
     }
 
@@ -140,6 +106,41 @@ class ListeRattrapageController extends BaseController
         $rattrapage['etat'] = "Validé";
 
         $modele_rattrapage->update($id, $rattrapage);
+
+        //Envoi d'un mail aux etudiants
+
+        $participeModel = new ParticipeModel();
+        $participe = $participeModel->where('id_R', $id)->findAll();
+
+        $etudiantModel = new EtudiantModel();
+// on récupère tous les etudiants qui participent au rattrapage
+        $emailService = \Config\Services::email();
+
+        $from = 'tassery.hugo@gmail.com';
+        $subject = 'Ajout d\'un rattrapage le ' . $rattrapage['date_DS'];
+        $emailService->setFrom($from);
+        $emailService->setSubject($subject);
+
+        for ($i = 0; $i < count($participe); $i++) {
+            $etudiant = $etudiantModel->where('id_Edt', $participe[$i]['id_Edt'])->first();
+            if ($etudiant != null) {
+                $emailService->setTo($etudiant['email']);
+
+                $message = " Bonjour " . $etudiant['prenom'] . " " . $etudiant['nom'] . ",
+            Vous avez été convoqué à un rattrapage le  " . $rattrapage['date_DS'] . " de " . $rattrapage['duree'] . " heure(s) par " . $rattrapage['enseignant'] . "
+            dans la salle " . $rattrapage['salle'] . ".
+            Merci de vous présenter.";
+
+                $emailService->setFrom($from);
+                $emailService->setMessage($message);
+                if ($emailService->send()) {
+                    echo 'E-mail envoyé à ' . $etudiant['prenom'] . " " . $etudiant['nom'] . ' avec succès.';
+                } else {
+                    echo $emailService->printDebugger();
+                }
+            }
+
+        }
 
         return redirect()->to('/');
     }
@@ -156,7 +157,36 @@ class ListeRattrapageController extends BaseController
         $rattrapage['etat'] = "Neutralisé";
 
         $modele_rattrapage->update($id, $rattrapage);
-        
+
+        //Envoi d'un mail au directeur
+
+        $emailDir = 'tassery.hugo@gmail.com';
+
+        $directeurModel = new DirecteurModel();
+        $directeur = $directeurModel->where('email', $emailDir)->first();
+        $emailService = \Config\Services::email();
+
+        $enseignantModel = new EnseignantModel();
+        $enseignant = $enseignantModel->where('id_Ens', $rattrapage['enseignant'])->first();
+
+        $message = " Bonjour Directeur,
+            Le rattrapage du " . $rattrapage['date_DS'] . " de " . $rattrapage['duree'] . " heure(s) a été annulé par " . $enseignant['prenom'] . " " . $enseignant['nom'] . ".
+            Merci de votre compréhension.";
+
+        $from = 'tassery.hugo@gmail.com';
+        $to = $directeur['email'];
+        $subject = 'Annulation d\'un rattrapage le ' . $rattrapage['date_DS'] . ' par ' . $rattrapage['enseignant'];
+
+        $emailService->setTo($to);
+        $emailService->setFrom($from);
+        $emailService->setSubject($subject);
+        $emailService->setMessage($message);
+        if ($emailService->send()) {
+            echo 'E-mail envoyé avec succès.';
+        } else {
+            echo $emailService->printDebugger();
+        }
+
         return redirect()->to('/');
     }
 

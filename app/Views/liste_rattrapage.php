@@ -75,6 +75,7 @@
                                 <td><?=$rattrapage['ressource'];?></td>
                                 <td><?=$rattrapage['date_DS'];?></td>
                                 <td><?=$rattrapage['duree'];?></td>
+                                <td><?=$enseignants[ 'id_Ens' == $rattrapage['enseignant'] ]['prenom'] . ' ' . $enseignants[ 'id_Ens' == $rattrapage['enseignant'] ]['nom'];?></td>
                                 <td><?=$rattrapage['etat'];?></td>
                                 <td>
                                     <?php if (session()->get('isLoggedIn')): ?>
@@ -108,8 +109,6 @@
             <div class="cadre">
                 <div class="pager">
                     <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout';">Ajouter un rattrapage</button>
-                    <br/><br/>
-                    <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout_enseignant';">Gérer les enseignants</button>
                 </div>
                 <div style="width:20%;padding:10px"></div>
             </div>
