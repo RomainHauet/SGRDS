@@ -77,18 +77,12 @@
             </div>
         </div>
 
-		<div class="titre">
-			<h3 class="violet">Ajout d'un enseignant</h3>
-		</div>
-
         <br/><br/>
 
         <div class="cadre">
             <div class="pager">
-                <form action='/ajout_enseignant/' " method="post">
-
-					<br/>
-
+                <h3 class="violet" style="text-align:center">Ajout d'un enseignant</h3>
+                <form action='/ajout_enseignant/' method="post">
                     <div class="titre" style="display:flex">
                         <label for="nom">Nom</label>
                         <input type="text" name="nom" id="nom" required>
@@ -113,9 +107,7 @@
                     <button class="connexion" type="submit">Ajouter</button>
                 </form>
             </div>
-            <div class="connexion">
-                <!--<button onclick="window.location.href='/';">Retour à la liste</button>-->
-            </div
+            <div style="width:20%;padding:10px"></div>
         </div>
     </body>
 </html>
