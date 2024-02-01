@@ -72,6 +72,9 @@
                     <p>Aucun Enseignant sur la base de données.</p>
                 <?php endif;?>
             </div>
+			<div class="connexion">
+                    <button onclick="window.location.href='/';">Retour à l'accueil</button>
+            </div>
         </div>
 
 		<div class="titre">
@@ -110,9 +113,9 @@
                     <button class="connexion" type="submit">Ajouter</button>
                 </form>
             </div>
-            <!--<div class="connexion">
-                <button onclick="window.location.href='/';">Retour à la liste</button>
-            </div>-->
+            <div class="connexion">
+                <!--<button onclick="window.location.href='/';">Retour à la liste</button>-->
+            </div
         </div>
     </body>
 </html>
