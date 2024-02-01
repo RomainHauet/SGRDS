@@ -22,7 +22,7 @@
                                     <?php else: ?>
                                         <h3 class="violet">Ajout d'un rattrapage</h3>
                                     <?php endif; ?>
-                                </div>                            
+                                </div>
                             </td>
                             <td class="di"><img src="/assets/images/diMini2009.gif" alt="Département Informatique"></td>
                         </tr>

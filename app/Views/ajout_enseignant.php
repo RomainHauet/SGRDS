@@ -33,37 +33,25 @@
 
         <div class="cadre">
             <div class="pager">
-                <?php if (!empty($rattrapages) && is_array($rattrapages)): ?>
+                <?php if (!empty($enseignant) && is_array($enseignant)): ?>
                     <table class="sortable">
                         <thead>
                             <tr>
                                 <th aria-sort="ascending">
                                     <button>
-                                        Ressource
+                                        Nom
                                         <span aria-hidden="true"></span>
                                     </button>
                                 </th>
                                 <th>
                                     <button>
-                                        Date
+                                        Prénom
                                         <span aria-hidden="true"></span>
                                     </button>
                                 </th>
                                 <th>
                                     <button>
-                                        Durée
-                                        <span aria-hidden="true"></span>
-                                    </button>
-                                </th>
-                                <th>
-                                    <button>
-                                        Enseignant
-                                        <span aria-hidden="true"></span>
-                                    </button>
-                                </th>
-                                <th>
-                                    <button>
-                                        Etat
+                                        Email
                                         <span aria-hidden="true"></span>
                                     </button>
                                 </th>
@@ -71,45 +59,20 @@
                         </thead>
                         <?php foreach ($rattrapages as $rattrapage): ?>
                             <tr>
-                                <td><?=$rattrapage['ressource'];?></td>
-                                <td><?=$rattrapage['date_DS'];?></td>
-                                <td><?=$rattrapage['duree'];?></td>
-                                <td><?=$rattrapage['enseignant'];?></td>
-                                <td><?=$rattrapage['etat'];?></td>
+                                <td><?=$enseignant['Nom'];?></td>
+                                <td><?=$enseignant['Prénom'];?></td>
+                                <td><?=$enseignant['Email'];?></td>
                                 <td>
-                                    <?php if (session()->get('isLoggedIn')): ?>
                                         <button onclick="window.location.href='/modifier/<?=$rattrapage['id_R'];?>';">Modifier</button>
                                         <button onclick="window.location.href='/supprimer/<?=$rattrapage['id_R'];?>';">Supprimer</button>
-                                    <?php else: ?>
-                                        <button onclick="window.location.href='/valider/<?=$rattrapage['id_R'];?>';">Valider</button>
-                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach;?>
                     </table>
                 <?php else: ?>
-                    <p>Aucun rattrapage.</p>
+                    <p>Aucun Enseignant sur la base de données.</p>
                 <?php endif; ?>
             </div>
-
-            <?php if (session()->get('isLoggedIn')): ?>
-                <div class="connexion">
-                    <button onclick="window.location.href='/deconnexion';">Déconnexion</button>
-                </div>
-            <?php else: ?>
-                <div class="connexion">
-                    <button onclick="window.location.href='/connexion';">Connexion chef de département</button>
-                </div>
-            <?php endif; ?>
         </div>
-
-        <?php if (session()->get('isLoggedIn')): ?>
-            <div class="cadre">
-                <div class="pager">
-                    <button class="connexion" style="height: 50px;" onclick="window.location.href='/ajout';">Ajouter un rattrapage</button>
-                </div>
-                <div style="width:20%;padding:10px"></div>
-            </div>
-        <?php endif;?>
     </body>
 </html>
