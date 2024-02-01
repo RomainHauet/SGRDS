@@ -94,7 +94,7 @@ class ListeRattrapageController extends BaseController
         $subject = 'Ajout d\'un rattrapage le ' . $rattrapage['date_DS'];
         $emailService->setFrom($from);
         $emailService->setSubject($subject);
-
+/*
         for ($i = 0; $i < count($participe); $i++) {
             $étudiant = $étudiantModel->where('id_Edt', $participe[$i]['id_Edt'])->findAll();
             $emailService->setTo($étudiant['email']);
@@ -112,7 +112,7 @@ class ListeRattrapageController extends BaseController
                 echo $emailService->printDebugger();
             }
 
-        }
+        }*/
 
         return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
     }
