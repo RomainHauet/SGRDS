@@ -39,6 +39,12 @@
                             <tr>
                                 <th aria-sort="ascending">
                                     <button>
+                                        Semestre
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </th>
+                                <th>
+                                    <button>
                                         Ressource
                                         <span aria-hidden="true"></span>
                                     </button>
@@ -46,6 +52,18 @@
                                 <th>
                                     <button>
                                         Date
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </th>
+                                <th>
+                                    <button>
+                                        Type DS
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </th>
+                                <th>
+                                    <button>
+                                        Type Rattrapage
                                         <span aria-hidden="true"></span>
                                     </button>
                                 </th>
@@ -63,6 +81,12 @@
                                 </th>
                                 <th>
                                     <button>
+                                        Salle
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </th>
+                                <th>
+                                    <button>
                                         Etat
                                         <span aria-hidden="true"></span>
                                     </button>
@@ -72,10 +96,14 @@
                         <tbody>
                         <?php foreach ($rattrapages as $rattrapage): ?>
                             <tr>
+                                <td><?=$rattrapage['semestre'];?></td>
                                 <td><?=$rattrapage['ressource'];?></td>
                                 <td><?=$rattrapage['date_DS'];?></td>
+                                <td><?=$rattrapage['type_DS'];?></td>
+                                <td><?=$rattrapage['type_Rattrapage'];?></td>
                                 <td><?=$rattrapage['duree'];?></td>
                                 <td><?=$enseignants[ 'id_Ens' == $rattrapage['enseignant'] ]['prenom'] . ' ' . $enseignants[ 'id_Ens' == $rattrapage['enseignant'] ]['nom'];?></td>
+                                <td><?=$rattrapage['salle'];?></td>
                                 <td><?=$rattrapage['etat'];?></td>
                                 <td>
                                     <?php if (session()->get('isLoggedIn')): ?>

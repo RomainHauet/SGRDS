@@ -14,15 +14,14 @@ class ListeRattrapageController extends BaseController
     {
         //récupérer le model
         $modele_rattrapage = new RattrapageModel();
-        $enseignant = new EnseignantModel();
-        $etudiant = new EtudiantModel();
 
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapages = $modele_rattrapage->findAll();
+        //pour chaque rattrapage, on récupère le nom de l'enseignant
+        $enseignant = new EnseignantModel();
         $enseignants = $enseignant->getEnseignants();
-        $etudiants = $etudiant->getEtudiants();
 
-        return view('liste_rattrapage', ['rattrapages' => $rattrapages, 'enseignants' => $enseignants, 'etudiants' => $etudiants]);
+        return view('liste_rattrapage', ['rattrapages' => $rattrapages, 'enseignants' => $enseignants]);
     }
 
     public function modifier($id): string
@@ -35,24 +34,14 @@ class ListeRattrapageController extends BaseController
 
         $semestre = new SemestreModel();
         $enseignant = new EnseignantModel();
-        $etudiant = new EtudiantModel();
-
         $data['semestres'] = $semestre->getSemestres();
         $data['ressources'] = $semestre->getRessources();
         $data['enseignants'] = $enseignant->getEnseignants();
-        $data['etudiants'] = $etudiant->getEtudiants();
         // Trie les semestres par ordre décroissant
         sort($data['semestres']);
 
         helper(['form']);
-        return view('ajout_rattrapage',
-        [
-            'semestres' => $data['semestres'],
-            'ressources' => $data['ressources'],
-            'enseignants' => $data['enseignants'],
-            'rattrapage' => $rattrapage,
-            'etudiants' => $data['etudiants']
-        ]);
+        return view('ajout_rattrapage', ['semestres' => $data['semestres'], 'ressources' => $data['ressources'], 'enseignants' => $data['enseignants'], 'rattrapage' => $rattrapage]);
     }
 
     public function modifierRattrapage($id)
@@ -92,28 +81,13 @@ class ListeRattrapageController extends BaseController
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapage = $modele_rattrapage->find($id);
 
-        return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
-    }
-
-    public function validerRattrapage($id)
-    {
-        //récupérer le model
-        $modele_rattrapage = new RattrapageModel();
-
-        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
-        $rattrapage = $modele_rattrapage->find($id);
-
-        $rattrapage['etat'] = "Validé";
-
-        $modele_rattrapage->update($id, $rattrapage);
-
         //Envoi d'un mail aux etudiants
 
         $participeModel = new ParticipeModel();
         $participe = $participeModel->where('id_R', $id)->findAll();
 
         $etudiantModel = new EtudiantModel();
-// on récupère tous les etudiants qui participent au rattrapage
+        // on récupère tous les etudiants qui participent au rattrapage
         $emailService = \Config\Services::email();
 
         $from = 'tassery.hugo@gmail.com';
@@ -141,6 +115,28 @@ class ListeRattrapageController extends BaseController
             }
 
         }
+
+        return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
+    }
+
+    public function validerRattrapage($id)
+    {
+        //récupérer le model
+        $modele_rattrapage = new RattrapageModel();
+
+        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
+        $rattrapage = $modele_rattrapage->find($id);
+
+        $rattrapage['commentaire'] = $this->request->getVar('commentaire');
+
+        $rattrapage['salle'] = $this->request->getVar('salle');
+        $rattrapage['type_Rattrapage'] = $this->request->getVar('type_Rattrapage');
+        $rattrapage['heure'] = $this->request->getVar('heure');
+        $rattrapage['date_Rattrapage'] = $this->request->getVar('date_Rattrapage');
+
+        $rattrapage['etat'] = "Validé";
+
+        $modele_rattrapage->update($id, $rattrapage);
 
         return redirect()->to('/');
     }
