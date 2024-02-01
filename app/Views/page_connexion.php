@@ -31,39 +31,44 @@
         <br/>
         <br/>
 
-        <div class="formulaire">
-            <form action="/connexion" method="post">
-                <div id="cent">
-                    <div class="titre" style="display:flex">
-                        <label for="username">Identifiant:</label>
-                        <input type="text" name="identifiant" required>
+        <div class="cadre">
+            <div class="pager">
+                <form action="/connexion" method="post">
+                    <div id="cent">
+                        <div class="titre" style="display:flex">
+                            <label for="username">Identifiant:</label>
+                            <input type="text" name="identifiant" required>
+                        </div>
+
+                        <?php if(session()->getFlashdata('utilisateurError')): ?>
+                            <div class="alert alert-danger"><?=session()->getFlashdata('utilisateurError') ?></div>
+                        <?php endif; ?>
+
+                        <br/>
+
+                        <div class="titre" style="display:flex">
+                            <label for="password">Mot de passe:</label>
+                            <input type="password" name="motDePasse" required>
+                        </div>
+                        <?php if(session()->getFlashdata('mdpError')): ?>
+                            <div class="alert alert-danger"><?=session()->getFlashdata('mdpError') ?></div>
+                        <?php endif; ?>
+
+                        <br/>
+
+                        <button class="connexion" type="submit">Connexion</button>
+
+                        <br/>
+
+                        <div class="titre">
+                            <a href="/oubli"><h4>Mot de passe oublié ?</h4></a>
+                        </div>
                     </div>
-
-                    <?php if(session()->getFlashdata('utilisateurError')): ?>
-                        <div class="alert alert-danger"><?=session()->getFlashdata('utilisateurError') ?></div>
-                    <?php endif; ?>
-
-                    <br/>
-
-                    <div class="titre" style="display:flex">
-                        <label for="password">Mot de passe:</label>
-                        <input type="password" name="motDePasse" required>
-                    </div>
-                    <?php if(session()->getFlashdata('mdpError')): ?>
-                        <div class="alert alert-danger"><?=session()->getFlashdata('mdpError') ?></div>
-                    <?php endif; ?>
-
-                    <br/>
-
-                    <button class="connexion" type="submit">Connexion</button>
-
-                    <br/>
-
-                    <div class="titre">
-                        <a href="/oubli"><h4>Mot de passe oublié ?</h4></a>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+            <div class="connexion">
+			    <button onclick="window.location.href='/';">Retour à la liste</button>
+		    </div>
         </div>
     </body>
 </html>

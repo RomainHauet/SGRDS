@@ -115,11 +115,10 @@ label
     margin-left: 25%;
 }
 
-label.erreur
+.erreur
 {
     width: 50%;
     margin-left: 25%;
-    color: red;
 }
 
 input
