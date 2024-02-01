@@ -20,4 +20,14 @@ class EnseignantModel extends Model
         'prenom' => 'required',
         'email' => 'required',
     ];
+
+    public function getEnseignants()
+    {
+        return $this->findAll();
+    }
+
+    public function getEnseignant($id)
+    {
+        return $this->where('id_Ens', $id)->first();
+    }
 }

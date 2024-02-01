@@ -22,21 +22,24 @@ class AjoutRattrapageController extends BaseController
         }*/
 
         // Récupère les semestres et toutes les ressources
-        $model = new SemestreModel();
-        $data['semestres'] = $model->getSemestres();
-        $data['ressources'] = $model->getRessources();
+        $semestre = new SemestreModel();
+        $enseignant = new EnseignantModel();
+        $data['semestres'] = $semestre->getSemestres();
+        $data['ressources'] = $semestre->getRessources();
+        $data['enseignants'] = $enseignant->getEnseignants();
         // Trie les semestres par ordre décroissant
         sort($data['semestres']);
 
         helper(['form']);
-        echo view('ajout_rattrapage', ['semestres' => $data['semestres'], 'ressources' => $data['ressources']]);
+        echo view('ajout_rattrapage', ['semestres' => $data['semestres'], 'ressources' => $data['ressources'], 'enseignants' => $data['enseignants']]);
     }
 
     public function ajoutRattrapage()
     {
         helper(['form']);
 
-        $model = new RattrapageModel();
+        $rattrapageModel = new RattrapageModel();
+        $enseignantModel = new EnseignantModel();
         $data = [
             'semestre' => $this->request->getVar('semestre'),
             'ressource' => $this->request->getVar('ressource'),
@@ -49,7 +52,7 @@ class AjoutRattrapageController extends BaseController
         ];
 
         // Le rattrapage est ajouté dans la base de données
-        $model->save($data);
+        $rattrapageModel->save($data);
 
         $session = session();
         $session->setFlashdata('success', 'Rattrapage ajouté avec succès');
@@ -57,16 +60,16 @@ class AjoutRattrapageController extends BaseController
         //Envoi d'un mail à l'enseignant
 
         $enseignantModel = new EnseignantModel();
-        $enseignant = $enseignantModel->where('id_E', $data['enseignant'])->first();
+        $enseignant = $enseignantModel->where('id_Ens', $this->request->getVar('enseignant'))->first();
         $emailService = \Config\Services::email();
 
-        $message = " Bonjour" . $enseignant['prenom'] . " " . $enseignant['nom'] . ",
-            Un rattrapage a été ajouté à votre emploi du temps le " . $data['date'] . " de " . $data['duree'] . " heure(s).
+        $message = " Bonjour " . $enseignant['prenom'] . " " . $enseignant['nom'] . ",
+            Un rattrapage a été ajouté à votre emploi du temps le " . $data['date_DS'] . " de " . $data['duree'] . " heure(s).
             Merci de valider ou de refuser ce rattrapage sur le site de gestion des rattrapages de l'IUT.";
 
         $from = 'tassery.hugo@gmail.com';
         $to = $enseignant['email'];
-        $subject = 'Ajout d\'un rattrapage le ' . $data['date'];
+        $subject = 'Ajout d\'un rattrapage le ' . $data['date_DS'];
 
         $emailService->setTo($to);
         $emailService->setFrom($from);

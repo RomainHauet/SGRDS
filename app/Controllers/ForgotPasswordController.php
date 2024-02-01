@@ -9,7 +9,9 @@ class ForgotPasswordController extends BaseController
     public function index()
     {
         helper(['form']);
-        return view('forgot_password');}
+        return view('forgot_password', ['message' => '', 'couleur' => 'black']);
+    }
+
     public function sendResetLink()
     {
         $email = $this->request->getPost('email');
@@ -19,8 +21,9 @@ class ForgotPasswordController extends BaseController
 // Dans la méthode sendResetLink du contrôleur ForgotPasswordController
 
         $email = $this->request->getPost('email');
-        echo 'Adresse e-mail soumise : ' . $email;
-        if ($user) {
+        //echo 'Adresse e-mail soumise : ' . $email;
+        if ($user)
+        {
 
 // Générer un jeton de réinitialisation de MDP et enregistrer-le dans BD
 
@@ -51,13 +54,19 @@ class ForgotPasswordController extends BaseController
             $emailService->setFrom($from);
             $emailService->setSubject('Réinitialisation de mot de passe');
             $emailService->setMessage($message);
-            if ($emailService->send()) {
-                echo 'E-mail envoyé avec succès.';
-            } else {
-                echo $emailService->printDebugger();
+
+            if ($emailService->send())
+            {
+                return view('forgot_password', ['message' => 'Mail envoyé avec succès.', 'couleur' => 'black']);
             }
-        } else {
-            echo 'Adresse e-mail non valide.';
+            else
+            {
+                return view('forgot_password', ['message' => $emailService->printDebugger(), 'couleur' => 'red']);
+            }
+        }
+        else
+        {
+            return view('forgot_password', ['message' => 'Adresse e-mail non valide.', 'couleur' => 'red']);
         }
     }
 

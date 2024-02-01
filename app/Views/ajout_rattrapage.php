@@ -140,8 +140,18 @@
                     <br/>
         
                     <div class="titre" style="display:flex">
-                        <label for="date">Date</label>
-                        <input type="date" name="date" id="date" required>
+                        <label for="type_DS">Type de DS</label>
+                        <select name="type_DS" id="type_DS" required>
+                            <option value="Devoir sur table">Devoir sur table</option>
+                            <option value="Devoir machine">Devoir machine</option>
+                        </select>
+                    </div>
+
+                    <br/>
+
+                    <div class="titre" style="display:flex">
+                        <label for="date_DS">Date</label>
+                        <input type="date" name="date_DS" id="date_DS" required>
                     </div>
 
                     <br/>
@@ -155,7 +165,15 @@
 
                     <div class="titre" style="display:flex">
                         <label for="enseignant">Enseignant</label>
-                        <input type="text" name="enseignant" id="enseignant" <?php if(isset($rattrapage)) echo 'value="'.$rattrapage['enseignant'].'"'; ?> required>
+                        <select name="enseignant" id="enseignant" required>
+                            <?php foreach($enseignants as $enseignant): ?>
+                                <?php if(isset($rattrapage) && $rattrapage['enseignant'] == $enseignant['id_Ens']): ?>
+                                    <option value="<?= $enseignant['id_Ens'] ?>" selected><?= $enseignant['nom'].' '.$enseignant['prenom'] ?></option>
+                                <?php else: ?>
+                                    <option value="<?= $enseignant['id_Ens'] ?>"><?= $enseignant['nom'].' '.$enseignant['prenom'] ?></option>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
 
                     <br/>

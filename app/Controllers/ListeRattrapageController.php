@@ -1,7 +1,11 @@
 <?php
 namespace App\Controllers;
+
 use App\Models\EleveModele;
 use App\Models\RattrapageModel;
+use App\Models\SemestreModel;
+use App\Models\EnseignantModel;
+
 class ListeRattrapageController extends BaseController
 {
     public function index(): string
@@ -11,8 +15,11 @@ class ListeRattrapageController extends BaseController
 
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapages = $modele_rattrapage->findAll();
+        //pour chaque rattrapage, on récupère le nom de l'enseignant
+        $enseignant = new EnseignantModel();
+        $enseignants = $enseignant->getEnseignants();
 
-        return view('liste_rattrapage', ['rattrapages' => $rattrapages]);
+        return view('liste_rattrapage', ['rattrapages' => $rattrapages, 'enseignants' => $enseignants]);
     }
 
     public function modifier($id): string
@@ -23,7 +30,16 @@ class ListeRattrapageController extends BaseController
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapage = $modele_rattrapage->find($id);
 
-        return view('ajout_rattrapage', ['rattrapage' => $rattrapage]);
+        $semestre = new SemestreModel();
+        $enseignant = new EnseignantModel();
+        $data['semestres'] = $semestre->getSemestres();
+        $data['ressources'] = $semestre->getRessources();
+        $data['enseignants'] = $enseignant->getEnseignants();
+        // Trie les semestres par ordre décroissant
+        sort($data['semestres']);
+
+        helper(['form']);
+        return view('ajout_rattrapage', ['semestres' => $data['semestres'], 'ressources' => $data['ressources'], 'enseignants' => $data['enseignants'], 'rattrapage' => $rattrapage]);
     }
 
     public function modifierRattrapage($id)
