@@ -12,17 +12,14 @@ class ResetPasswordController extends BaseController
         $user = $userModel->where('reset_token', $token)
             ->where('reset_expires_at >', date('Y-m-d H:i:s'))
             ->first();
-        if ($user) {
+        if ($user)
+        {
             return view('reset_password', ['token' => $token, 'couleur' => 'black', 'message' => '']);
-        } else {
-            return 'Lien de réinitialisation non valide.';
         }
-    }
-
-    public function indexB()
-    {
-        helper(['form']);
-        return view('reset_password_success');
+        else
+        {
+            return view('reset_password_success', ['token' => $token, 'couleur' => 'red', 'message' => 'Lien expiré.']);
+        }
     }
 
     public function updatePassword()
@@ -51,11 +48,11 @@ class ResetPasswordController extends BaseController
 
             if ($user['motDePasse'] === $password)
             {
-                return view('reset_password_success', ['token' => $token, 'message' => 'Mot de passe réinitialisé avec succès !']);
+                return view('reset_password_success', ['token' => $token, 'couleur' => 'black', 'message' => 'Mot de passe réinitialisé avec succès !']);
             }
             else
             {
-                return view('reset_password_success', ['token' => $token, 'message' => 'Erreur avec la base de données, merci de réessayer ultérieurement.']);
+                return view('reset_password_success', ['token' => $token, 'couleur' => 'red', 'message' => 'Erreur avec la base de données, merci de réessayer ultérieurement.']);
             }
         }
         else

@@ -31,11 +31,11 @@
 		<br/><br/>
 
 		<div class="formulaire">
-			<h3><?php echo $message?></h3>
+			<h3 style="text-align:center; color:<?php echo $couleur?>"><?php echo $message?></h3>
 
 			<br/>
 
-			<button onclick="window.location.href='/';"><br/>Retour à l'accueil<br/></button>
+			<button onclick="window.location.href='/';" style="height:50px">Retour à l'accueil</button>
 		</div>
 	</body>
 </html>
