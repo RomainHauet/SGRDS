@@ -194,17 +194,7 @@
                                     <td><?= $etudiant['nom'] ?></td>
                                     <td><?= $etudiant['prenom'] ?></td>
                                     <td>
-                                        <?php if(isset($participes)): ?>
-                                            <?php foreach($participes as $participe): ?>
-                                                <?php if($etudiant['id_Edt'] == $participe['id_Edt']): ?>
-                                                    <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>" checked>
-                                                <?php else: ?>
-                                                    <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-                                        <?php else: ?>
-                                            <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>">
-                                        <?php endif; ?>
+                                        <input style="width:100%" type="checkbox" name="etudiants[]" value="<?= $etudiant['id_Edt'] ?>" <?php if(isset($participe) && in_array($etudiant['id_Edt'], $participe)) echo 'checked'; ?>>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
