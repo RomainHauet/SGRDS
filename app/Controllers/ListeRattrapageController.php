@@ -81,13 +81,28 @@ class ListeRattrapageController extends BaseController
         //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
         $rattrapage = $modele_rattrapage->find($id);
 
+        return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
+    }
+
+    public function validerRattrapage($id)
+    {
+        //récupérer le model
+        $modele_rattrapage = new RattrapageModel();
+
+        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
+        $rattrapage = $modele_rattrapage->find($id);
+
+        $rattrapage['etat'] = "Validé";
+
+        $modele_rattrapage->update($id, $rattrapage);
+
         //Envoi d'un mail aux etudiants
 
         $participeModel = new ParticipeModel();
         $participe = $participeModel->where('id_R', $id)->findAll();
 
         $etudiantModel = new EtudiantModel();
-        // on récupère tous les etudiants qui participent au rattrapage
+// on récupère tous les etudiants qui participent au rattrapage
         $emailService = \Config\Services::email();
 
         $from = 'tassery.hugo@gmail.com';
@@ -115,21 +130,6 @@ class ListeRattrapageController extends BaseController
             }
 
         }
-
-        return view('valider_rattrapage', ['rattrapage' => $rattrapage]);
-    }
-
-    public function validerRattrapage($id)
-    {
-        //récupérer le model
-        $modele_rattrapage = new RattrapageModel();
-
-        //Lecture (find (une seule ligne) ou findAll (toutes les lignes)
-        $rattrapage = $modele_rattrapage->find($id);
-
-        $rattrapage['etat'] = "Validé";
-
-        $modele_rattrapage->update($id, $rattrapage);
 
         return redirect()->to('/');
     }
