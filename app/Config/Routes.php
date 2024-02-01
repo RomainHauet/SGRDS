@@ -25,3 +25,8 @@ $routes->post('/oubli', 'ForgotPasswordController::sendResetLink');
 
 $routes->get('/reset-password/(:any)', 'ResetPasswordController::index/$1');
 $routes->post('/reset-password/(:any)', 'ResetPasswordController::updatePassword');
+
+$routes->get('/ajout_enseignant', 'AjoutProfController::index/$1');
+$routes->post('/ajout_enseignant', 'AjoutProfController::create');
+
+$routes->get('/supprimerEnseignant/(:num)', 'AjoutProfController::supprimerEnseignant/$1');
